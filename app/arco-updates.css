@@ -1,0 +1,187 @@
+/* Shared navigation and mark across the ARCO pages. */
+.global-header:not(.global-header--home) {
+  border-bottom-color: rgb(117 188 255 / 15%);
+  background: rgb(6 17 66 / 96%);
+  box-shadow: 0 8px 26px rgb(6 17 66 / 13%);
+  color: white;
+}
+
+.global-header:not(.global-header--home) .global-nav a { color: #edf4ff; }
+.global-header:not(.global-header--home) .global-nav a:hover,
+.global-header:not(.global-header--home) .global-nav a:focus-visible { color: #75bcff; }
+.global-header:not(.global-header--home) .global-menu-button,
+.global-header:not(.global-header--home) .global-ecommerce {
+  border-color: rgb(214 234 255 / 32%);
+  background: transparent;
+  color: white;
+}
+.global-header:not(.global-header--home) .global-menu-button:hover,
+.global-header:not(.global-header--home) .global-ecommerce:hover {
+  border-color: #d6eaff;
+  background: rgb(214 234 255 / 10%);
+  color: white;
+}
+.global-header--home[data-header-state="compact"]::before {
+  background: rgb(6 17 66 / 95%);
+}
+.global-logo--signature img,
+.global-logo--footer img { display: block; filter: none; }
+
+.global-footer-grid .footer-contact-link {
+  gap: 0.7rem;
+  color: #e8f3ff;
+}
+.global-footer-grid .footer-contact-link > svg {
+  flex: none;
+  width: 1.1rem;
+  height: 1.1rem;
+  color: #75bcff;
+}
+.footer-contact-link b { color: #fff; font-weight: 700; }
+.global-footer-bottom { align-items: center; }
+.footer-credit { display: inline-flex; align-items: center; gap: 0.35rem; }
+.footer-credit-brand { display: inline-flex; align-items: center; gap: 0.25rem; color: #e3edff; font-weight: 700; }
+.footer-credit-brand img { display: block; width: 1.7rem; height: 1.7rem; object-fit: contain; }
+
+/* Six represented brands, with two clear catalog links for ArtMill. */
+.catalog-brand-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 1rem;
+}
+.catalog-brand-card {
+  display: flex;
+  flex-direction: column;
+}
+.catalog-brand-cover { aspect-ratio: 5 / 4; }
+.catalog-brand-body { display: flex; flex: 1; flex-direction: column; padding: 1.25rem; }
+.catalog-brand-title-row { align-items: center; }
+.catalog-brand-title-row h3 { font-size: 1rem; }
+.catalog-brand-body > p { min-height: 0; font-size: 0.88rem; }
+.catalog-brand-actions { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.55rem; margin-top: auto; padding-top: 1.25rem; }
+.catalog-brand-actions .catalog-open-button { width: 100%; min-height: 3rem; }
+.catalog-brand-actions .catalog-open-button:not(:first-child) { background: #eef5ff; color: #0948a7; border: 1px solid #c7d7ed; }
+.catalog-brand-actions .catalog-open-button:not(:first-child):hover { background: #dcecff; }
+.catalog-ecommerce-link { margin-top: 0.8rem; font-size: 0.82rem; }
+.catalog-faq-grid { align-items: center; }
+.catalog-faq-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  width: fit-content;
+  min-height: 3.2rem;
+  border: 1px solid #c7d7ed;
+  border-radius: 0.55rem;
+  padding: 0.65rem 1.1rem;
+  color: var(--arco-primary);
+  font-weight: 750;
+}
+.catalog-faq-link:hover { background: #eff6ff; }
+.catalog-faq-link svg { width: 1rem; height: 1rem; }
+
+/* The home CTA now starts a specific mix conversation. */
+.home-closing-grid { grid-template-columns: minmax(0, 1fr); }
+.home-closing-actions { grid-column: 1; }
+.home-closing .home-button { grid-column: auto; }
+.home-closing .home-button--primary:hover { background: #061142; color: white; }
+.home-region-pills span { font-size: 0.86rem; }
+
+/* Independent FAQ route. */
+.faq-page { background: #f6f8fc; color: #091532; }
+.faq-hero {
+  background: linear-gradient(130deg, #061142, #0a1f68 68%, #0454c6);
+  padding-block: clamp(5rem, 9vw, 8rem);
+  color: white;
+}
+.faq-hero .section-eyebrow { color: #75bcff; }
+.faq-hero h1 {
+  max-width: 880px;
+  margin: 0;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+}
+.faq-hero p:last-child {
+  max-width: 640px;
+  margin: 1.35rem 0 0;
+  color: #d3e5fc;
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+.faq-content { padding-block: clamp(3.5rem, 7vw, 6rem); }
+.faq-group {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.55fr) minmax(0, 1.45fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  padding-block: 2rem 3.5rem;
+  border-bottom: 1px solid #d8e3f0;
+}
+.faq-group + .faq-group { padding-top: 4rem; }
+.faq-group-heading h2 {
+  margin: 0;
+  color: #061142;
+  font-size: clamp(1.6rem, 2.6vw, 2.3rem);
+  letter-spacing: -0.035em;
+}
+.faq-group .catalog-faq-list [data-slot="accordion-trigger"] { font-size: 1rem; }
+.faq-group .catalog-faq-list [data-slot="accordion-content"] { font-size: 0.95rem; }
+.faq-contact { background: #061142; color: white; }
+.faq-contact-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding-block: 3.5rem;
+}
+.faq-contact p { margin: 0 0 0.45rem; color: #75bcff; }
+.faq-contact h2 { margin: 0; font-size: clamp(1.8rem, 3vw, 2.7rem); }
+.faq-contact-description { display: block; margin-top: 0.75rem; color: #c7d9f2; font-size: 1rem; }
+.faq-contact-actions { display: grid; justify-items: start; gap: 0.9rem; }
+.faq-contact-actions > .faq-whatsapp-button {
+  min-height: 3.25rem;
+  padding-inline: 1.25rem;
+  background: #0878ed;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 750;
+}
+.faq-contact-actions > .faq-whatsapp-button:hover,
+.faq-contact-actions > .faq-whatsapp-button:focus-visible { background: #2667d9; color: #fff; }
+.faq-contact-actions > .faq-registration-link { color: #d3e5fc; font-size: 0.86rem; font-weight: 650; }
+.faq-contact-actions > .faq-registration-link:hover { color: #fff; }
+.faq-contact-actions > a svg { display: inline; width: 1rem; height: 1rem; }
+
+@media (max-width: 1100px) {
+  .catalog-brand-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .catalog-brand-grid { grid-template-columns: 1fr; }
+  .faq-group { grid-template-columns: 1fr; gap: 1rem; }
+  .faq-contact-inner { align-items: start; flex-direction: column; }
+  .catalog-logo-viewport {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    mask-image: none;
+  }
+  .catalog-logo-viewport::-webkit-scrollbar { display: none; }
+  .catalog-logo-track { animation: none; will-change: auto; }
+  .catalog-logo-group--clone { display: none; }
+  .catalog-logo-item { scroll-snap-align: start; }
+}
+
+@media (max-width: 520px) {
+  .global-footer-bottom { align-items: flex-start; gap: 1rem; }
+  .footer-credit { order: 3; }
+  .home-closing-actions { align-items: stretch; }
+  .home-closing .home-button { width: 100%; }
+  .catalog-brand-cover { aspect-ratio: 5 / 3; }
+  .catalog-faq-link { width: 100%; }
+  .faq-contact-actions,
+  .faq-contact-actions > .faq-whatsapp-button { width: 100%; }
+  .faq-contact-actions > .faq-whatsapp-button { justify-content: center; }
+}

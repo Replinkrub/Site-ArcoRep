@@ -1,0 +1,235 @@
+.page {
+  overflow: clip;
+  background: #fff;
+  color: #07143a;
+}
+
+.hero {
+  position: relative;
+  min-height: 690px;
+  overflow: hidden;
+  background: #061142;
+  color: white;
+}
+
+.heroImage,
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: 72% 48%;
+  opacity: 0.78;
+}
+
+.heroOverlay {
+  background:
+    linear-gradient(90deg, rgb(4 10 45 / 98%) 0%, rgb(4 10 45 / 88%) 48%, rgb(4 10 45 / 30%) 78%, rgb(4 10 45 / 18%) 100%),
+    linear-gradient(0deg, rgb(3 8 35 / 58%), transparent 56%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: 690px;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 7rem;
+}
+
+.kicker {
+  margin: 0 0 1.1rem;
+  color: #44a7ff;
+  font-size: 0.75rem;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero h1,
+.definitionCopy h2,
+.sectionHeading h2,
+.principleIntro h2,
+.presence h2,
+.cta h2 {
+  margin: 0;
+  font-weight: 870;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+}
+
+.hero h1 {
+  max-width: 800px;
+  font-size: clamp(3.5rem, 6vw, 6.1rem);
+}
+
+.heroContent > p:not(.kicker) {
+  max-width: 650px;
+  margin: 1.6rem 0 0;
+  color: #c5d3e6;
+  font-size: clamp(1rem, 1.6vw, 1.16rem);
+  line-height: 1.75;
+}
+
+.primaryButton {
+  width: fit-content;
+  min-height: 54px;
+  margin-top: 2rem;
+  border-radius: 6px;
+  background: #164ee7;
+  padding-inline: 1.5rem;
+  color: white;
+  font-weight: 800;
+}
+
+.primaryButton:hover { background: #0454c6; color: white; }
+.primaryButton svg { width: 1rem; height: 1rem; }
+
+.proof { background: #030729; color: white; }
+
+.proofGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.proof article {
+  display: grid;
+  min-height: 190px;
+  align-content: center;
+  border-left: 1px solid rgb(255 255 255 / 10%);
+  padding: 2rem;
+}
+
+.proof article:last-child { border-right: 1px solid rgb(255 255 255 / 10%); }
+.proof strong { font-size: clamp(2.6rem, 4vw, 4.2rem); line-height: 1; letter-spacing: -0.05em; }
+.proof span { max-width: 150px; margin-top: 0.65rem; color: #a9b7cd; font-size: 0.82rem; line-height: 1.45; }
+
+.definition { padding-block: clamp(6rem, 10vw, 9rem); background: #eef0ff; }
+
+.definitionGrid {
+  display: grid;
+  grid-template-columns: minmax(380px, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(3.5rem, 8vw, 8rem);
+}
+
+.definitionMedia {
+  position: relative;
+  min-height: 590px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 30px 80px rgb(6 17 66 / 18%);
+}
+
+.definitionMedia::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 62%, rgb(3 8 35 / 58%));
+  content: "";
+}
+
+.definitionMedia img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.definitionMedia span { position: absolute; z-index: 2; right: 1.5rem; bottom: 1.4rem; left: 1.5rem; color: white; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+
+.definitionCopy h2,
+.sectionHeading h2,
+.principleIntro h2,
+.presence h2,
+.cta h2 { font-size: clamp(2.7rem, 4.7vw, 4.7rem); }
+
+.definitionCopy > p:not(.kicker) { margin: 1.4rem 0 0; color: #59667c; font-size: 1rem; line-height: 1.78; }
+
+.audiences { padding-block: clamp(6rem, 9vw, 8rem); }
+.sectionHeading { max-width: 840px; }
+.audienceGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; margin-top: 4rem; border-top: 1px solid #dce3ed; border-bottom: 1px solid #dce3ed; }
+.audienceGrid article { display: grid; grid-template-columns: 62px 1fr; gap: 1.5rem; min-height: 340px; padding: clamp(2rem, 4vw, 3.2rem); }
+.audienceGrid article + article { border-left: 1px solid #dce3ed; }
+.audienceGrid svg { width: 3rem; height: 3rem; color: #164ee7; stroke-width: 1.35; }
+.audienceGrid span { color: #164ee7; font-size: 0.72rem; font-weight: 850; letter-spacing: 0.12em; text-transform: uppercase; }
+.audienceGrid h3 { max-width: 470px; margin: 1rem 0 0; font-size: clamp(1.7rem, 2.5vw, 2.35rem); line-height: 1.08; letter-spacing: -0.04em; }
+.audienceGrid p { margin: 1.2rem 0 0; color: #5c687d; line-height: 1.7; }
+
+.principles { padding-block: clamp(6rem, 10vw, 9rem); background: #061142; color: white; }
+.principleIntro { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; }
+.principleIntro h2 { max-width: 760px; color: white; }
+.principleIntro > svg { width: 5rem; height: 5rem; color: #44a7ff; stroke-width: 1; }
+.principleList { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 4.5rem; border-top: 1px solid rgb(255 255 255 / 14%); }
+.principleList article { min-height: 270px; border-right: 1px solid rgb(255 255 255 / 14%); padding: 2rem 2rem 1rem 0; }
+.principleList article + article { padding-left: 2rem; }
+.principleList article:last-child { border-right: 0; }
+.principleList span { color: #44a7ff; font-size: 0.75rem; font-weight: 850; letter-spacing: 0.14em; }
+.principleList h3 { margin: 3rem 0 0; font-size: 1.5rem; letter-spacing: -0.03em; }
+.principleList p { margin: 1rem 0 0; color: #aebbd0; line-height: 1.7; }
+
+.presence { padding-block: clamp(6rem, 9vw, 8rem); background: #eef0ff; }
+.presenceGrid { display: grid; grid-template-columns: 1.15fr 0.85fr; align-items: end; gap: clamp(3rem, 8vw, 8rem); }
+.presenceCopy { border-left: 2px solid #164ee7; padding-left: 1.5rem; }
+.presenceCopy svg { width: 1.5rem; height: 1.5rem; color: #164ee7; }
+.presenceCopy p { margin: 1rem 0 0; color: #59667c; line-height: 1.75; }
+.presenceCopy a { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.4rem; color: #164ee7; font-weight: 800; }
+.presenceCopy a svg { width: 1rem; height: 1rem; }
+
+.cta { padding-block: clamp(5rem, 8vw, 7rem); background: #164ee7; color: white; }
+.ctaGrid { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 3rem; }
+.cta p { margin: 0 0 0.65rem; color: #d9ebff; font-size: 0.74rem; font-weight: 850; letter-spacing: 0.12em; text-transform: uppercase; }
+.cta h2 { max-width: 820px; color: white; }
+.ctaActions { display: grid; justify-items: start; }
+.ctaActions .primaryButton { margin-top: 0; border: 1px solid white; background: white; color: #164ee7; }
+.ctaActions .primaryButton:hover { background: #061142; color: white; }
+.ctaActions > a { margin-top: 1rem; color: rgb(255 255 255 / 78%); font-size: 0.85rem; font-weight: 800; }
+
+@media (max-width: 900px) {
+  .proofGrid { grid-template-columns: repeat(2, 1fr); }
+  .proof article:nth-child(3), .proof article:nth-child(4) { border-top: 1px solid rgb(255 255 255 / 10%); }
+  .definitionGrid, .presenceGrid { grid-template-columns: 1fr; }
+  .definitionMedia { min-height: 520px; }
+  .audienceGrid { grid-template-columns: 1fr; }
+  .audienceGrid article + article { border-top: 1px solid #dce3ed; border-left: 0; }
+  .principleList { grid-template-columns: 1fr; }
+  .principleList article, .principleList article + article { min-height: auto; border-right: 0; border-bottom: 1px solid rgb(255 255 255 / 14%); padding: 2rem 0; }
+  .principleList article:last-child { border-bottom: 0; }
+  .principleList h3 { margin-top: 1.5rem; }
+  .ctaGrid { grid-template-columns: 1fr; align-items: start; }
+}
+
+@media (max-width: 640px) {
+  .hero, .heroContent { min-height: 650px; }
+  .heroContent { padding-block: 5rem; }
+  .hero h1 { font-size: clamp(3rem, 14vw, 4.4rem); }
+  .heroImage { object-position: 66% center; }
+  .heroOverlay { background: linear-gradient(0deg, rgb(4 10 45 / 98%) 0%, rgb(4 10 45 / 78%) 68%, rgb(4 10 45 / 34%) 100%); }
+  .proof article { min-width: 0; min-height: 150px; padding: 1rem; }
+  .proof article:nth-child(3) { grid-column: 1 / -1; min-height: 110px; }
+  .proof strong { font-size: clamp(1.9rem, 8.2vw, 2.6rem); }
+  .definitionMedia { min-height: 460px; }
+  .definitionCopy h2, .sectionHeading h2, .principleIntro h2, .presence h2, .cta h2 { font-size: clamp(2.4rem, 11.5vw, 3.4rem); }
+  .audienceGrid article { grid-template-columns: 1fr; min-height: auto; padding: 2rem 0; }
+  .principleIntro > svg { display: none; }
+  .ctaActions { width: 100%; }
+  .ctaActions .primaryButton { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primaryButton, .presenceCopy a, .ctaActions > a { transition: none; }
+}
+
+@media (max-width: 900px) {
+  .definitionCopy { order: -1; }
+}
+@media (max-width: 640px) {
+  .hero, .heroContent { min-height: 560px; }
+  .heroContent { padding-block: 3.5rem; }
+  .hero h1 { font-size: clamp(2.5rem, 10.5vw, 3.4rem); }
+  .definition, .audiences, .presence, .cta { padding-block: 3.5rem; }
+  .definitionGrid { gap: 2rem; }
+  .definitionMedia { min-height: 320px; }
+  .definitionMedia span { font-size: .75rem; }
+  .definitionCopy h2, .sectionHeading h2, .presence h2, .cta h2 { font-size: clamp(2rem, 8.5vw, 2.7rem); }
+  .audienceGrid { margin-top: 2rem; }
+}
