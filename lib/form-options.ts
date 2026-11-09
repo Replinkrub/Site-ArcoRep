@@ -1,0 +1,2 @@
+export const states = ["AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"] as const;
+export const segments = ["Supermercado / mercadinho", "Açougue / casa de carnes", "Empório / loja especializada", "Atacarejo / distribuidor", "Restaurante / operação de alimentos", "Indústria", "Outro"] as const;

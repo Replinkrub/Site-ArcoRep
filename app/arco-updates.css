@@ -85,7 +85,6 @@
 .home-closing-actions { grid-column: 1; }
 .home-closing .home-button { grid-column: auto; }
 .home-closing .home-button--primary:hover { background: #061142; color: white; }
-.home-region-pills span { font-size: 0.86rem; }
 
 /* Independent FAQ route. */
 .faq-page { background: #f6f8fc; color: #091532; }

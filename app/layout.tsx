@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
+import { ContactOriginTracker } from "@/components/contact-origin-tracker";
 import "./globals.css";
 import "./site-polish.css";
 import "./home-v2.css";
 import "./arco-updates.css";
 import "./editorial.css";
+import "./mobile.css";
+import "./commerce.css";
+import "./presence.css";
+import "./catalogos/catalog.css";
+import "./discovery.css";
 
 export const metadata: Metadata = {
   title: "ARCO Representações | Especialistas na seção churrasco",
   description:
-    "Desde 2018, conectando indústrias ao varejo de Pernambuco. Alimentos, acessórios e equipamentos para a seção churrasco da sua loja.",
+    "Representação comercial em Pernambuco desde 2018. Alimentos, acessórios e equipamentos para churrasco, com orientação de mix e apoio na reposição.",
   icons: {
     icon: [
       { url: "/arco-logo-icon-32.png", type: "image/png", sizes: "32x32" },
@@ -28,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body><ContactOriginTracker />{children}</body>
     </html>
   );
 }

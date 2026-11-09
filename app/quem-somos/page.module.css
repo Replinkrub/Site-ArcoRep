@@ -233,3 +233,35 @@
   .definitionCopy h2, .sectionHeading h2, .presence h2, .cta h2 { font-size: clamp(2rem, 8.5vw, 2.7rem); }
   .audienceGrid { margin-top: 2rem; }
 }
+
+/* Keep the secondary mobile journey on the same compact rhythm as Home. */
+@media (max-width: 760px) {
+  .hero, .heroContent { min-height: 0; }
+  .heroContent { padding-block: 2.5rem; }
+  .hero h1 { font-size: clamp(2.125rem, 8.8vw, 3rem); line-height: 1.08; }
+  .heroContent > p:not(.kicker),
+  .definitionCopy > p:not(.kicker),
+  .audienceGrid p, .principleList p, .presenceCopy p { font-size: 1rem; line-height: 1.55; }
+  .kicker { font-size: .875rem; letter-spacing: .065em; }
+  .definition, .audiences, .principles, .presence, .cta { padding-block: 2.5rem; }
+  .definitionGrid, .presenceGrid { gap: 1.5rem; }
+  .definitionCopy h2, .sectionHeading h2, .principleIntro h2, .presence h2, .cta h2 {
+    font-size: clamp(1.75rem, 7.2vw, 2.25rem);
+    line-height: 1.12;
+  }
+  .proofGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .proof article, .proof article:nth-child(3) { grid-column: auto; min-height: 0; padding: 1.25rem .625rem; border-top: 0; }
+  .proof strong { font-size: clamp(1.5rem, 6vw, 2rem); }
+  .proof span { font-size: .875rem; line-height: 1.4; }
+  .definitionMedia { min-height: 0; aspect-ratio: 4 / 3; }
+  .definitionMedia img { display: block; position: absolute; inset: 0; }
+  .definitionMedia span { right: .75rem; bottom: .75rem; left: .75rem; font-size: .75rem; }
+  .audienceGrid, .principleList { margin-top: 1.5rem; }
+  .audienceGrid article { grid-template-columns: 1fr; min-height: 0; gap: 1rem; padding-block: 1.5rem; }
+  .audienceGrid span, .principleList span { font-size: .875rem; }
+  .principleList article, .principleList article + article { padding-block: 1.5rem; }
+  .principleList h3 { margin-top: .75rem; }
+  .primaryButton { height: auto; min-height: 48px; white-space: normal; text-align: center; padding: .75rem 1rem; font-size: .9375rem; }
+  .ctaGrid { gap: 1.5rem; }
+  .ctaActions > a, .presenceCopy a { min-height: 44px; font-size: .875rem; }
+}

@@ -1,0 +1,79 @@
+[
+  {
+    "file": "/catalog/files/cantagallo-2026.dc469a82ba.pdf",
+    "sourceDriveId": "1lNmGti3PTVF1yGQYjXcY9yWc7f76a2M2",
+    "sourceName": "CATALOGO DIGITAL 2026 (5).pdf",
+    "sourceSha256": "dc469a82ba4906ea2e3d1e542fd6cf13505adc9d76a02098783f0376b594342f",
+    "publishedSha256": "dc469a82ba4906ea2e3d1e542fd6cf13505adc9d76a02098783f0376b594342f",
+    "originalBytes": 18223669,
+    "publishedBytes": 18223669,
+    "pages": 23,
+    "optimized": false
+  },
+  {
+    "file": "/catalog/files/monte-novo-2026.ce6b3c3536.pdf",
+    "sourceDriveId": "1GESIr5XnRGhwXE7fxqj11FigAYM6KGnS",
+    "sourceName": "Catalogo Monte Novo 2026.pdf",
+    "sourceSha256": "ce6b3c353619e181f8c278006dd9b7ce6922bce989f9908b4bb5422354881379",
+    "publishedSha256": "ce6b3c353619e181f8c278006dd9b7ce6922bce989f9908b4bb5422354881379",
+    "originalBytes": 8574841,
+    "publishedBytes": 8574841,
+    "pages": 23,
+    "optimized": false
+  },
+  {
+    "file": "/catalog/files/prime-grill.7fc4d1d127.pdf",
+    "sourceDriveId": "1UD11QbdrDLt7obqdlMYQg1cgMeTCzZRD",
+    "sourceName": "CATALOGO-PRIME-GRILL.pdf",
+    "sourceSha256": "7fc4d1d1270900659a6a616edf6f20c4c141b710cf38bd041f6b84663fdd9e88",
+    "publishedSha256": "7fc4d1d1270900659a6a616edf6f20c4c141b710cf38bd041f6b84663fdd9e88",
+    "originalBytes": 2827638,
+    "publishedBytes": 2827638,
+    "pages": 12,
+    "optimized": false
+  },
+  {
+    "file": "/catalog/files/artmill-acessorios-2025.bd1750451f.pdf",
+    "sourceDriveId": "1G3v06Txecw7Ue-wTgYD8RuMMky7ut2p3",
+    "sourceName": "Artmill_Catalogo_Acessórios 2025.pdf",
+    "sourceSha256": "7645e8fc1212ea17d50b9f5c8549f8a249d6c39deaedadf84d04b8e14ffaa154",
+    "publishedSha256": "bd1750451feb134729128c51a0f99e2d291eb149318b38c6f914013116693dc0",
+    "originalBytes": 27256011,
+    "publishedBytes": 9723350,
+    "pages": 39,
+    "optimized": true
+  },
+  {
+    "file": "/catalog/files/artmill-pits-2024.5cba4dd29a.pdf",
+    "sourceDriveId": "1fiskcK3P3ys8az_S-64MJB6fXwvw9E_r",
+    "sourceName": "Catalogo Geral Pits e Fogo de Chão 2024 .pdf",
+    "sourceSha256": "3d5eb4d2a53fe14e381d684c6c09401811af3ad6b16e47b990e4adb5b6008953",
+    "publishedSha256": "5cba4dd29a7074e73a0ff00e2ad6e26f9d89c02ae2261c043317fdf9e1ed2856",
+    "originalBytes": 44750316,
+    "publishedBytes": 14401381,
+    "pages": 26,
+    "optimized": true
+  },
+  {
+    "file": "/catalog/files/adm-metais.e7b386c5b8.pdf",
+    "sourceDriveId": "1d5B_ip_ohNZVRA5Ety3Sl2lKC_p4jgcf",
+    "sourceName": "CATALOGO-METAL-ADM.pdf",
+    "sourceSha256": "e7b386c5b8101a63044e3d52040c74babe2753bcd41ba7c8e3f0a9bd218168e7",
+    "publishedSha256": "e7b386c5b8101a63044e3d52040c74babe2753bcd41ba7c8e3f0a9bd218168e7",
+    "originalBytes": 7177892,
+    "publishedBytes": 7177892,
+    "pages": 10,
+    "optimized": false
+  },
+  {
+    "file": "/catalog/files/orved-brock-2025.d861adeb50.pdf",
+    "sourceDriveId": "1RonIL6y3UvUMzZV_TXuds0tjG42k6dH8",
+    "sourceName": "Catalogo Geral 2025 - Orved Brock.pdf",
+    "sourceSha256": "d861adeb5007d5b85aaf166a359d417cd9b8764af72210968b2522eb696b9fe5",
+    "publishedSha256": "d861adeb5007d5b85aaf166a359d417cd9b8764af72210968b2522eb696b9fe5",
+    "originalBytes": 6580871,
+    "publishedBytes": 6580871,
+    "pages": 6,
+    "optimized": false
+  }
+]

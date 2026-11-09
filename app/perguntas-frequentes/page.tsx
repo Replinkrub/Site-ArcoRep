@@ -1,24 +1,30 @@
 import type { Metadata } from "next";
+import Link from "@/components/site-link";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
-import { arcoContact, catalogFaq, whatsappUrl } from "@/lib/catalog-data";
+import { buttonVariants } from "@/components/ui/button";
+import { arcoContact, catalogFaq } from "@/lib/catalog-data";
+import { attendanceUrl } from "@/lib/attendance";
 
 export const metadata: Metadata = {
   title: "Perguntas frequentes | ARCO Representações",
   description: "Respostas sobre catálogos, cadastro, pedidos e atendimento comercial da ARCO em Pernambuco.",
 };
 
-const answerLinks: Record<string, { href: string; label: string }> = {
-  "Como faço meu primeiro pedido?": { href: arcoContact.registrationUrl, label: "Solicitar cadastro" },
-  "Onde vejo preços e faço pedidos?": { href: arcoContact.orderPlatformUrl, label: "Comprar para sua loja" },
-  "Como recebo o catálogo de uma marca?": { href: "/catalogos", label: "Ver catálogos" },
-  "Os catálogos têm preço?": { href: arcoContact.orderPlatformUrl, label: "Consultar no Mercos" },
-  "Qual é o pedido mínimo?": { href: whatsappUrl("Olá, Antonio. Quero consultar o pedido mínimo e as condições de uma representada."), label: "Consultar condições" },
-  "Representam marcas interessadas no varejo de Pernambuco?": { href: whatsappUrl("Olá, Antonio. Sou de uma indústria e quero conversar sobre representação em Pernambuco."), label: "Conversar sobre representação" },
+const answerLinks: Record<string, { href: string; label: string }[]> = {
+  "Como faço meu primeiro pedido?": [
+    { href: attendanceUrl("mix"), label: "Orientação para o primeiro pedido" },
+    { href: arcoContact.registrationUrl, label: "Solicitar acesso para comprar" },
+  ],
+  "Onde vejo preços e faço pedidos?": [{ href: arcoContact.orderPlatformUrl, label: "Já tenho acesso: fazer pedido" }],
+  "Como recebo o catálogo de uma marca?": [{ href: "/catalogos", label: "Ver catálogos" }],
+  "Os catálogos têm preço?": [{ href: attendanceUrl("condicoes"), label: "Consultar preços e condições" }],
+  "Qual é o pedido mínimo?": [{ href: attendanceUrl("condicoes"), label: "Consultar condições" }],
+  "Como funcionam frete, pagamento e prazo de entrega?": [{ href: attendanceUrl("condicoes"), label: "Consultar condições" }],
+  "Sou da indústria. Como proponho uma representação?": [{ href: attendanceUrl("industria"), label: "Conversar sobre representação" }],
 };
 
 const questions = [
@@ -27,23 +33,23 @@ const questions = [
     items: [
       {
         question: "Preciso de CNPJ para comprar?",
-        answer: "Sim. Nosso atendimento comercial é voltado a empresas com CNPJ, como supermercados, açougues, empórios e lojas especializadas.",
+        answer: "Sim. Atendemos empresas com CNPJ, para revenda ou uso na operação. Trabalhamos com supermercados, açougues, empórios e lojas especializadas.",
       },
       {
         question: "Como faço meu primeiro pedido?",
-        answer: "Solicite o cadastro da empresa. Com o acesso liberado, você pode comprar pelo Mercos ou contar com a equipe comercial para montar o primeiro pedido.",
+        answer: "Conheça as linhas nos catálogos ou fale com a ARCO para escolher os produtos e conferir condições. Para comprar no Mercos, solicite o acesso da empresa. Após a liberação, consulte preços e envie o pedido.",
       },
       {
         question: "Onde vejo preços e faço pedidos?",
-        answer: "Clientes cadastrados podem acessar o Mercos, nossa plataforma de pedidos para as marcas representadas. Nossa equipe também pode orientar a escolha dos produtos e a montagem do pedido.",
+        answer: "No Mercos, para clientes com acesso liberado. Fale com a ARCO para confirmar as marcas disponíveis para sua empresa, conferir condições e receber apoio na montagem do pedido.",
       },
       {
         question: "Qual é o pedido mínimo?",
-        answer: "O pedido mínimo depende da representada e das condições comerciais da marca. Consulte a ARCO antes de fechar seu pedido.",
+        answer: "Cada representada tem suas condições. Informe a marca que deseja comprar para confirmarmos o mínimo antes de você montar o pedido.",
       },
       {
         question: "Como funcionam frete, pagamento e prazo de entrega?",
-        answer: "Essas condições variam conforme a marca, o pedido e o destino. Confirmamos as informações para o seu caso durante o atendimento comercial.",
+        answer: "As condições variam conforme a representada, o valor do pedido e o destino. Informe a marca e a cidade da loja para consultar frete, formas de pagamento e prazo antes de fechar a compra.",
       },
     ],
   },
@@ -53,19 +59,19 @@ const questions = [
       ...catalogFaq.filter(({ question }) => question === "Como recebo o catálogo de uma marca?" || question === "Os catálogos têm preço?"),
       {
         question: "A ARCO ajuda a montar o mix da loja?",
-        answer: "Sim. Consideramos o perfil da loja, o espaço disponível, o público e o potencial de giro para indicar uma combinação de produtos adequada à operação.",
+        answer: "Sim. Conte o tipo de loja, o público, o espaço disponível e as linhas que já vende. A partir disso, orientamos a escolha para o primeiro pedido, a reposição ou a ampliação do mix.",
       },
       {
         question: "O atendimento continua depois do pedido?",
-        answer: "Sim. Acompanhamos a presença dos produtos na loja e ajudamos a planejar reposições e ajustes de mix.",
+        answer: "Sim. Acompanhamos seu histórico de pedidos para orientar reposições e ajustes de mix. Também orientamos a exposição dos produtos e acompanhamos demandas comerciais após a venda.",
       },
       {
         question: "Em que região a ARCO atua?",
-        answer: "Nossa base e foco comercial estão em Pernambuco. Fale com a equipe para confirmar o atendimento da sua loja.",
+        answer: "Nossa base e foco comercial estão em Pernambuco. Informe a cidade da loja e as marcas de interesse para confirmarmos o atendimento.",
       },
       {
-        question: "Representam marcas interessadas no varejo de Pernambuco?",
-        answer: "Sim. Se você é da indústria, entre em contato para conversarmos sobre portfólio, mercado e possibilidades de representação.",
+        question: "Sou da indústria. Como proponho uma representação?",
+        answer: "Fale com a ARCO e apresente seu portfólio, as condições comerciais e a região que pretende atender. Vamos avaliar a aderência das linhas ao varejo de Pernambuco e as possibilidades de representação.",
       },
     ],
   },
@@ -80,7 +86,7 @@ export default function PerguntasFrequentesPage() {
           <div className="page-shell">
             <p className="section-eyebrow">Atendimento ARCO</p>
             <h1>Perguntas frequentes</h1>
-            <p>Informações para comprar com clareza, conhecer as representadas e falar com a equipe.</p>
+            <p>Como comprar, solicitar acesso e consultar as condições de cada representada.</p>
           </div>
         </section>
         <div className="page-shell faq-content">
@@ -95,7 +101,7 @@ export default function PerguntasFrequentesPage() {
                     <AccordionTrigger>{item.question}</AccordionTrigger>
                     <AccordionContent>
                       {item.answer}
-                      {answerLinks[item.question] && <a className="faq-answer-link" href={answerLinks[item.question].href} target={answerLinks[item.question].href.startsWith("/") ? undefined : "_blank"} rel="noreferrer">{answerLinks[item.question].label} <ArrowRight aria-hidden="true" /></a>}
+                      {answerLinks[item.question]?.map(link => <Link key={link.href} prefetch={link.href.startsWith("/")} className="faq-answer-link" href={link.href} target={link.href.startsWith("/") ? undefined : "_blank"} rel="noreferrer">{link.label} <ArrowRight aria-hidden="true" /></Link>)}
                     </AccordionContent>
                   </AccordionItem>
                 ))}
@@ -108,13 +114,11 @@ export default function PerguntasFrequentesPage() {
             <div>
               <p>Atendimento comercial</p>
               <h2>Ainda tem alguma dúvida?</h2>
-              <span className="faq-contact-description">Nossa equipe ajuda com catálogos, cadastro e pedidos.</span>
+              <span className="faq-contact-description">Informe a marca e a cidade da loja para receber orientação.</span>
             </div>
             <div className="faq-contact-actions">
-              <Button asChild className="faq-whatsapp-button">
-                <a href={whatsappUrl("Olá, Antonio. Tenho uma dúvida sobre o atendimento da ARCO.")} target="_blank" rel="noreferrer"><MessageCircle aria-hidden="true" /> Falar pelo WhatsApp</a>
-              </Button>
-              <a className="faq-registration-link" href={arcoContact.registrationUrl} target="_blank" rel="noreferrer">Ainda não é cliente? Solicitar cadastro <ArrowRight aria-hidden="true" /></a>
+              <Link prefetch={true} className={buttonVariants({ className: "faq-whatsapp-button" })} href={attendanceUrl()}><MessageCircle aria-hidden="true" /> Solicitar atendimento</Link>
+              <a className="faq-registration-link" href={arcoContact.registrationUrl} target="_blank" rel="noreferrer">Solicitar acesso para comprar <ArrowRight aria-hidden="true" /></a>
             </div>
           </div>
         </section>

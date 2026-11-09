@@ -110,7 +110,7 @@ export function HomeMotion() {
             }, 1080);
             partnerObserver?.unobserve(entry.target);
           });
-        }, { threshold: 0.18 });
+        }, { threshold: 0.05 });
 
         if (partnerIsOffscreen) {
           partnerNetwork.dataset.partnerState = "pending";
@@ -158,13 +158,13 @@ export function HomeMotion() {
           const centerDistance = viewportHeight / 2 - rect.top - rect.height / 2;
           if (name === "hero") {
             const offset = clamp(-rect.top * 0.12, 0, 90);
-            layers[0].style.transform = `translate3d(0, ${offset.toFixed(2)}px, 0)`;
-            layers[1].style.transform = `translate3d(0, ${(offset * 0.35).toFixed(2)}px, 0)`;
+            if (layers[0]) layers[0].style.transform = `translate3d(0, ${offset.toFixed(2)}px, 0)`;
+            if (layers[1]) layers[1].style.transform = `translate3d(0, ${(offset * 0.35).toFixed(2)}px, 0)`;
           } else if (name === "about") {
-            layers[0].style.transform = `translate3d(0, ${clamp(centerDistance * 0.12, -64, 64).toFixed(2)}px, 0)`;
+            if (layers[0]) layers[0].style.transform = `translate3d(0, ${clamp(centerDistance * 0.12, -64, 64).toFixed(2)}px, 0)`;
           } else if (name === "region") {
-            layers[0].style.transform = `translate3d(0, ${clamp(centerDistance * 0.06, -30, 30).toFixed(2)}px, 0)`;
-            layers[1].style.transform = `translate3d(0, ${clamp(centerDistance * 0.025, -12, 12).toFixed(2)}px, 0)`;
+            if (layers[0]) layers[0].style.transform = `translate3d(0, ${clamp(centerDistance * 0.06, -30, 30).toFixed(2)}px, 0)`;
+            if (layers[1]) layers[1].style.transform = `translate3d(0, ${clamp(centerDistance * 0.025, -12, 12).toFixed(2)}px, 0)`;
             if (layers[2]) {
               const partnerY = clamp(centerDistance * 0.014, -6, 6);
               const partnerX = clamp(centerDistance * -0.018, -8, 8);
@@ -172,7 +172,7 @@ export function HomeMotion() {
             }
           } else if (name === "manifesto") {
             const progress = clamp((viewportHeight * 0.88 - rect.top) / (rect.height * 0.75), 0, 1);
-            layers[0].style.transform = `scaleX(${progress})`;
+            if (layers[0]) layers[0].style.transform = `scaleX(${progress})`;
           }
         }
       }
