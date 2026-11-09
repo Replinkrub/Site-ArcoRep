@@ -1,5 +1,7 @@
 "use client";
 
+import SiteImage from "@/components/site-image";
+
 import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -78,7 +80,7 @@ export function BrandCarousel() {
               <div className={`home-brand-art home-brand-art--${(index % 3) + 1}`}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 {brand.logo ? (
-                  <img src={brand.logo} alt={brand.name} loading="lazy" decoding="async" width={250} height={125} />
+                  <SiteImage src={brand.logo} alt={brand.name} loading="lazy" decoding="async" width={250} height={125} />
                 ) : (
                   <strong>{brand.name.slice(0, 2).toUpperCase()}</strong>
                 )}

@@ -1,0 +1,1717 @@
+{
+  "project": "Site ARCO — ARCO Representações",
+  "site_url": "https://arco-representacoes.antonioaquino.chatgpt.site",
+  "project_id": "appgprj_6aa17b355ffc8191ab5cf096b876ada5",
+  "site_version": 65,
+  "source_branch": "main",
+  "source_commit": "bc8683f205a9089e8b300335a7c11fdd67bd0e9b",
+  "source_commit_date": "2026-11-05T09:41:35-03:00",
+  "export_date": "2026-11-09",
+  "source_files": 340,
+  "public_asset_files": 172,
+  "excluded_tracked_files": [
+    "tsconfig.tsbuildinfo"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "size_bytes": 598,
+      "sha256": "55d0a3e1f8e2e31b6fda7293305b96d676e6fcd51a9680d6903dd7240fa0e192"
+    },
+    {
+      "path": ".npmrc",
+      "size_bytes": 45,
+      "sha256": "a3909ac0447c469fda12c57374993be70f47ce73e49fd3124678c7c047f2214d"
+    },
+    {
+      "path": ".openai/hosting.json",
+      "size_bytes": 91,
+      "sha256": "b03c404718c4beddbac30a737e88ab0e8702fb5c67a3562e7f9b186e8f2f3d68"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 10213,
+      "sha256": "0e9105be814d1a1cbc81dba8afdb77458ac6b0c99725114ffc675f6b63fd4dd9"
+    },
+    {
+      "path": "STATUS-ARCO.md",
+      "size_bytes": 2156,
+      "sha256": "a520d44fe3ff909917d57cc33eb572410859df381cf38a0e3cd787244177a3d9"
+    },
+    {
+      "path": "app/api/contatos/exportar/route.ts",
+      "size_bytes": 1776,
+      "sha256": "a7b9c5b93af4910de65e53eaf8adb3eebddc34d50c997e5f9e363527fc660e79"
+    },
+    {
+      "path": "app/api/contatos/route.ts",
+      "size_bytes": 2513,
+      "sha256": "772400df099da3300d839b8d6514a7a6759bcf8e331e140a5e53ce585c47f9dd"
+    },
+    {
+      "path": "app/arco-updates.css",
+      "size_bytes": 6856,
+      "sha256": "a7ba1705c2e6035f667c3937a103b8e316f6f96e6430e4bcb8d2f0b4d14dee5b"
+    },
+    {
+      "path": "app/atendimento/page.module.css",
+      "size_bytes": 1357,
+      "sha256": "42e94a913f618c63a1b06e50bddb083a0c3c1693aef290f5d51011ba195a7ac0"
+    },
+    {
+      "path": "app/atendimento/page.tsx",
+      "size_bytes": 1934,
+      "sha256": "8c67d4a81848def4f6239002c48c2ab1586e600f245a84136493281ad38d521b"
+    },
+    {
+      "path": "app/calculadora/page.module.css",
+      "size_bytes": 7522,
+      "sha256": "29f9cd5ee0e1e7cd2472c4662729e3da245095de49577bcaf24a1aee95fde8a2"
+    },
+    {
+      "path": "app/calculadora/page.tsx",
+      "size_bytes": 1119,
+      "sha256": "79fe3a3277b3066cbe8f2b7cf9927b0a03a37d2074b7a2fe5c9509d1528c2745"
+    },
+    {
+      "path": "app/catalogos/catalog.css",
+      "size_bytes": 6296,
+      "sha256": "ec4d317c1667d868783a49b4a5c44943204e4b6cebcd2b0d6edf521f757f714f"
+    },
+    {
+      "path": "app/catalogos/page.tsx",
+      "size_bytes": 1077,
+      "sha256": "79132d97bed8607340b2dfb50ddf1024578dd242b1780ff9f33fc634d68973c1"
+    },
+    {
+      "path": "app/chatgpt-auth.ts",
+      "size_bytes": 2550,
+      "sha256": "4265a2e7c2dcb3a6f4b7026f762bf5b6e4caec76cc13c0a45987ee9a9f2e42cc"
+    },
+    {
+      "path": "app/comercial/contatos/page.module.css",
+      "size_bytes": 2557,
+      "sha256": "27ba54ca9ca93e23f453502847b5945be25b2d3e56ca02deeb408cc28cd89d94"
+    },
+    {
+      "path": "app/comercial/contatos/page.tsx",
+      "size_bytes": 4898,
+      "sha256": "5b4d551e6805ba918e75a5c0448cd865947b9b7aa702fe3cb571c9f6d56015e1"
+    },
+    {
+      "path": "app/commerce.css",
+      "size_bytes": 3323,
+      "sha256": "ae43c60becf644906d672d96427801764133bb1b395610d945028081e862779b"
+    },
+    {
+      "path": "app/discovery.css",
+      "size_bytes": 15559,
+      "sha256": "b320c9145967230f144c0ed90891b1334053ebb59365d16d3ac30554d862d526"
+    },
+    {
+      "path": "app/editorial.css",
+      "size_bytes": 7185,
+      "sha256": "7c8d39f0763ba79d93bc7f356ae6b8e46912abc0a22ab3c8c0da588f10697bca"
+    },
+    {
+      "path": "app/globals.css",
+      "size_bytes": 27478,
+      "sha256": "d02464901fe698fbcc53af3b71d1622342cff42a98154c22d7817d3ea89e4c87"
+    },
+    {
+      "path": "app/home-v2.css",
+      "size_bytes": 57459,
+      "sha256": "31ef7ff46302b0db9916ef51d47205dafb0bfd4ed0616f7bc41cc3f7e3898cc8"
+    },
+    {
+      "path": "app/layout.tsx",
+      "size_bytes": 1313,
+      "sha256": "efb9f966168b5137d0262e2911049b9464d5dbdc0dd4f2efa0c80aad39086d82"
+    },
+    {
+      "path": "app/mobile.css",
+      "size_bytes": 9983,
+      "sha256": "9a9d47d05275511feda893193d298127463636330ad6a5abbf89073a8008af56"
+    },
+    {
+      "path": "app/page.tsx",
+      "size_bytes": 16654,
+      "sha256": "7edf78df05ed13d42ae0d58eabb510117eeb8265bbb585c4d1602084374a8309"
+    },
+    {
+      "path": "app/perguntas-frequentes/page.tsx",
+      "size_bytes": 6988,
+      "sha256": "7e4994a22293b219885f8da99be00ddaf0a7e3b028a16546e985da28ae9e7332"
+    },
+    {
+      "path": "app/presence.css",
+      "size_bytes": 6721,
+      "sha256": "83d69cb7d23ec34e27ddfbe27cd08863846632b9828825cbe79f39af64f3f516"
+    },
+    {
+      "path": "app/quem-somos/page.module.css",
+      "size_bytes": 10771,
+      "sha256": "107c0d304c81bc5e021d639153fdf904f6bafe6bf6bed96138829aa71b6992f0"
+    },
+    {
+      "path": "app/quem-somos/page.tsx",
+      "size_bytes": 6789,
+      "sha256": "a0c02122d8d611a20bd0e1a67a5a0dc06039b49cc8a177fada3820d87bed97fa"
+    },
+    {
+      "path": "app/representadas/[slug]/page.tsx",
+      "size_bytes": 5738,
+      "sha256": "0908f85672649fd16b64fcf54148a7f7c0333e875136c305af23d8e8e695d6fe"
+    },
+    {
+      "path": "app/representadas/page.tsx",
+      "size_bytes": 2405,
+      "sha256": "c3280ed9efa17a32ba89027bdbce75027264b50a6aa78bd2694d46afc4eee9d9"
+    },
+    {
+      "path": "app/site-polish.css",
+      "size_bytes": 2271,
+      "sha256": "7ebf8639205651e20a12d7f0145e38daebdc6d3d43d210988c4cabb012da1237"
+    },
+    {
+      "path": "build/sites-vite-plugin.LICENSE",
+      "size_bytes": 1063,
+      "sha256": "7de1e115d165f176e68f962acdb809b5ab8d8ae78d3981e0701392b2ac50c713"
+    },
+    {
+      "path": "build/sites-vite-plugin.ts",
+      "size_bytes": 7185,
+      "sha256": "07af20e7097d9ed1d76f7c446d02997550b8fc5ca89668b249e25eabd62c6834"
+    },
+    {
+      "path": "cloudflare-env.d.ts",
+      "size_bytes": 130,
+      "sha256": "c4baea68ffeecb4e086a5ed1375e36e718f250d4b4f7c01ec0ead00ff712ffb3"
+    },
+    {
+      "path": "components.json",
+      "size_bytes": 420,
+      "sha256": "31f4ca67a4a62572571003d3d5aac85ee6fbfca67a192924bac6b168d95e98fd"
+    },
+    {
+      "path": "components/attendance-form.tsx",
+      "size_bytes": 7817,
+      "sha256": "089f6660be985199c4ddc0faf6f734810e74d6cd8e61d2f7d3e527380e3bdf08"
+    },
+    {
+      "path": "components/brand-discovery.tsx",
+      "size_bytes": 3503,
+      "sha256": "771507e6d8f4a86fe3b1765908e399504600cadcbadee120f3e263e6929ca72c"
+    },
+    {
+      "path": "components/catalog/brand-logo-rail.tsx",
+      "size_bytes": 3625,
+      "sha256": "342f3f6cc2f3e7043675c7b19b35f52f434a8fcd25980aed8fa0982861d9b5fc"
+    },
+    {
+      "path": "components/catalog/catalog-access-button.tsx",
+      "size_bytes": 1449,
+      "sha256": "7307e25e2d43a1253bbea5be5b760ea2b03fdfda5d6f7faee72667e13f094e7a"
+    },
+    {
+      "path": "components/catalog/catalog-access-dialog.tsx",
+      "size_bytes": 11024,
+      "sha256": "1461be15dedacc609f768f5aa65b34558374fa5cf3ab711e93b8afcf29459fc0"
+    },
+    {
+      "path": "components/catalog/catalog-explorer.tsx",
+      "size_bytes": 12112,
+      "sha256": "a7b5ec542c6cae40d34c185749e4dcd784201a3bc36baf47162750cc0c280e09"
+    },
+    {
+      "path": "components/catalog/use-logo-scroll.ts",
+      "size_bytes": 3651,
+      "sha256": "c3dc1c3af09394a0c9ffe735e847829d13ab9483996d477e8c0ed8f3c2e54abe"
+    },
+    {
+      "path": "components/contact-origin-tracker.tsx",
+      "size_bytes": 237,
+      "sha256": "88c74c07b848c1b723627d3d9cbcb9b01b5a098638764e16c88d8bf0fd5971e3"
+    },
+    {
+      "path": "components/home/brand-carousel.tsx",
+      "size_bytes": 4036,
+      "sha256": "208bf79faba39de6e001622aebb81f7f1de1d4b9ca4725c967dc22223774ebe6"
+    },
+    {
+      "path": "components/home/field-video.tsx",
+      "size_bytes": 1567,
+      "sha256": "b8a29408c73e4ae0c68115a26d684c3cd58851c751ae259567dfd54a45ffe608"
+    },
+    {
+      "path": "components/home/home-motion.tsx",
+      "size_bytes": 11829,
+      "sha256": "0c0fa4a3f3f37286956f3981a2be7dd54dfd26388f98e24d617ee59da7131e1e"
+    },
+    {
+      "path": "components/home/partner-photo-grid.tsx",
+      "size_bytes": 5950,
+      "sha256": "1014edf49abc5029dead6feeb14f4f21b8c0caff3428ac7117039e2817d66d2e"
+    },
+    {
+      "path": "components/home/pernambuco-outline.ts",
+      "size_bytes": 2384,
+      "sha256": "d1fcda8078ba43c8f7611214e38a6fc31bce9c3501489cb3c7f53738542f162d"
+    },
+    {
+      "path": "components/home/presence-background.tsx",
+      "size_bytes": 11369,
+      "sha256": "d6ddbe0ae30dfa5f5be76b7da4aa7dc1c164c32f63cc6983ee9f028aaa53827f"
+    },
+    {
+      "path": "components/home/use-hero-header.ts",
+      "size_bytes": 2883,
+      "sha256": "d584c9ff9d15d9c742092b935f3f4740bfb745e06bd964c658cc325f529ac4d4"
+    },
+    {
+      "path": "components/pricing-calculator.tsx",
+      "size_bytes": 11734,
+      "sha256": "39d64feaf5cf83485e914f77057f18504e23a848ca43536e178dc991861fcbe9"
+    },
+    {
+      "path": "components/site-footer.tsx",
+      "size_bytes": 2924,
+      "sha256": "64bf0e817310280afd9c6c3598b59900c070df21ff79cb35ddd1af2d3d07c034"
+    },
+    {
+      "path": "components/site-header.tsx",
+      "size_bytes": 5365,
+      "sha256": "6c3d584ab43f91069329a2e035f6eb8d746a0d6eefe2d0e6d4a3e7c56f7eacf1"
+    },
+    {
+      "path": "components/site-image.tsx",
+      "size_bytes": 828,
+      "sha256": "641d9927fb4449ff585c76e1645560d3725e1cb7b19d45f791a75909cc906fd2"
+    },
+    {
+      "path": "components/site-link.tsx",
+      "size_bytes": 1129,
+      "sha256": "38efa5be65776fb7d64de00c95c21ee938183953fab6c311f5e294a127677a83"
+    },
+    {
+      "path": "components/ui/accordion.tsx",
+      "size_bytes": 2048,
+      "sha256": "a4f153089ba886dfcf73fac26b5c01ca933fa12fbe88df6fb723912bfffdfbb0"
+    },
+    {
+      "path": "components/ui/alert-dialog.tsx",
+      "size_bytes": 5439,
+      "sha256": "9a8d950f2b9b4352d5ebb762fb44d5c28c2d353aa29712071973656a8736e311"
+    },
+    {
+      "path": "components/ui/alert.tsx",
+      "size_bytes": 1614,
+      "sha256": "2cc59b5f7bda91c1670884b1bf46bfc8a2a6f226cef184f5762acc037188885b"
+    },
+    {
+      "path": "components/ui/aspect-ratio.tsx",
+      "size_bytes": 274,
+      "sha256": "b1c157886236782cb92d8fbcd4749532aaf6d8aabefd6e157ca40358f902f407"
+    },
+    {
+      "path": "components/ui/attachment.tsx",
+      "size_bytes": 6002,
+      "sha256": "ae8a25dd1a896d3964e3ef54d97e51221b418cde287dfd794428b89951c5c790"
+    },
+    {
+      "path": "components/ui/avatar.tsx",
+      "size_bytes": 2916,
+      "sha256": "58a846bf1617b94b9681921db9b8461d0145f311424663d11678a06b6153cb34"
+    },
+    {
+      "path": "components/ui/badge.tsx",
+      "size_bytes": 1776,
+      "sha256": "46a0de5224f6a5d5d63d45246534288518dce888f031064bff925bbc7fe6ad97"
+    },
+    {
+      "path": "components/ui/breadcrumb.tsx",
+      "size_bytes": 2350,
+      "sha256": "d4c0831bba2212e778248f54a6ace6ef378df8bba4616d1abf27787a31eabae5"
+    },
+    {
+      "path": "components/ui/bubble.tsx",
+      "size_bytes": 4699,
+      "sha256": "870cc0c5cfc8a515053f7e41e706a6bd017a909b45f1305fd3b164a52cc4483b"
+    },
+    {
+      "path": "components/ui/button-group.tsx",
+      "size_bytes": 2202,
+      "sha256": "784c89d8ee683e1bc972ae69e6ea8225a7f63abe22aa1b5fc3423ae8a2a399c0"
+    },
+    {
+      "path": "components/ui/button.tsx",
+      "size_bytes": 2392,
+      "sha256": "cc36af0f8b5019c33cc039fbf03bb952a513072b15b55b53c592b78af3e5f4c4"
+    },
+    {
+      "path": "components/ui/calendar.tsx",
+      "size_bytes": 7832,
+      "sha256": "3855fbe0d3f8ad3a4b93071f98b76a9f6782d46ec8b05f5d2ddbee1e4e39bc84"
+    },
+    {
+      "path": "components/ui/card.tsx",
+      "size_bytes": 1987,
+      "sha256": "c48dd3b96be90a7066f1aebf294f0af9d00ebcdc367d5d4aca55429ade570c1c"
+    },
+    {
+      "path": "components/ui/carousel.tsx",
+      "size_bytes": 5556,
+      "sha256": "b7ea0dda3903d972c186f739e23da61f547bc83b5a0bf13b16856577846d5fc3"
+    },
+    {
+      "path": "components/ui/chart.tsx",
+      "size_bytes": 10614,
+      "sha256": "45aa5ea4a386f4fb5b8869ff4bab3a08cf89255190ee322043baf84c3e950b6a"
+    },
+    {
+      "path": "components/ui/checkbox.tsx",
+      "size_bytes": 1214,
+      "sha256": "b23ab9d4deeedf2ac8f512c368361ede681aa383437ef48563a6f9b7dbe95f27"
+    },
+    {
+      "path": "components/ui/collapsible.tsx",
+      "size_bytes": 795,
+      "sha256": "c6598e5584f4258b5d9fefadbc5ad6a66888ad58729f4b634a0bb2d9c513188b"
+    },
+    {
+      "path": "components/ui/combobox.tsx",
+      "size_bytes": 9158,
+      "sha256": "2d68e78b2dc7e38a085f222dede60a80b4f8229a6e91732c484605e204d46735"
+    },
+    {
+      "path": "components/ui/command.tsx",
+      "size_bytes": 4818,
+      "sha256": "361193df1e3d64a9e9b5048f045264782fcb387aab3f00f2b805fdcbf538b16a"
+    },
+    {
+      "path": "components/ui/context-menu.tsx",
+      "size_bytes": 8268,
+      "sha256": "2cf1fcf59df0649a3e2a126d1df2f639145f6b6bf5689ee54af1f40ab1245017"
+    },
+    {
+      "path": "components/ui/dialog.tsx",
+      "size_bytes": 4303,
+      "sha256": "dce39c6adc47d997bd2567f8b7a72f466b0134715105cd42f9194007b8ecdb14"
+    },
+    {
+      "path": "components/ui/direction.tsx",
+      "size_bytes": 506,
+      "sha256": "84ae2ad658207f0e0f367978e5508cd8027cd00c29c41d3d13db21a708c3d1e6"
+    },
+    {
+      "path": "components/ui/drawer.tsx",
+      "size_bytes": 4255,
+      "sha256": "cb6eaf58eb0757ca91af284e5d925b89a42ad7eb19cb3f44c575a3487aa9350f"
+    },
+    {
+      "path": "components/ui/dropdown-menu.tsx",
+      "size_bytes": 8418,
+      "sha256": "98f0dcdae38225b73734aceeb9213dd751fea2c72ea520df31003cd133deac8a"
+    },
+    {
+      "path": "components/ui/empty.tsx",
+      "size_bytes": 2396,
+      "sha256": "ae95bdcf367a076ae02e7925f14522a148798f72d9651749c6d55497dba584c0"
+    },
+    {
+      "path": "components/ui/field.tsx",
+      "size_bytes": 6159,
+      "sha256": "ba67d76f017ac059fc86cf8c344e0b2991c4322d3619e125498c19b87f6eefbd"
+    },
+    {
+      "path": "components/ui/form.tsx",
+      "size_bytes": 3757,
+      "sha256": "315b46bb75ab7d1c6061b5d750aa4bedf6e7a455e15e2d7f9182f053d5972b1e"
+    },
+    {
+      "path": "components/ui/hover-card.tsx",
+      "size_bytes": 1526,
+      "sha256": "f5d8df42c59370ec14d61bcc54f7d68e9bb7dfa0d6a872b2f7cffc2aafbf23b8"
+    },
+    {
+      "path": "components/ui/input-group.tsx",
+      "size_bytes": 5065,
+      "sha256": "6afbd58fea4c438e6252dc4568bddc122e84ababead4ad5cee50ace01100c9a0"
+    },
+    {
+      "path": "components/ui/input-otp.tsx",
+      "size_bytes": 2254,
+      "sha256": "161946daa89f0eda2575b9271c0494e35807c4ffb55598a49f67160c17fec299"
+    },
+    {
+      "path": "components/ui/input.tsx",
+      "size_bytes": 962,
+      "sha256": "8c4612a7c41319ac5049daa3b34b080f9784b6245c17780eb87c127e58e473db"
+    },
+    {
+      "path": "components/ui/item.tsx",
+      "size_bytes": 4486,
+      "sha256": "6e2144d6d87142dbbe56d568810bf546318c8aa661447ebb0d76ebbf382cb45f"
+    },
+    {
+      "path": "components/ui/kbd.tsx",
+      "size_bytes": 862,
+      "sha256": "6088c3a5432338b1719c17e9b5d0e1fa74fd1f66060f248fc88909d33a82cd13"
+    },
+    {
+      "path": "components/ui/label.tsx",
+      "size_bytes": 606,
+      "sha256": "a476e41f08b9de5bd447de66a33d8bc2ad18f2fa6b96c064778bab4b6f439f4c"
+    },
+    {
+      "path": "components/ui/marker.tsx",
+      "size_bytes": 1864,
+      "sha256": "3d798763f094b2bb5e7ade2d5cd1b9bab498bc8ca7fd4cfaf4e5835bdedc34a0"
+    },
+    {
+      "path": "components/ui/menubar.tsx",
+      "size_bytes": 8389,
+      "sha256": "9243af8afcea03703398ccd1c2a8c0a87ad6cbaf2bd272fb609f5b79fe46aebb"
+    },
+    {
+      "path": "components/ui/message-scroller.tsx",
+      "size_bytes": 3992,
+      "sha256": "bb7660a248e4e9589c3816c7c1c199ea1381a70d2c8476ae895b567a7a4d86cf"
+    },
+    {
+      "path": "components/ui/message.tsx",
+      "size_bytes": 2232,
+      "sha256": "9d2952bf3b641081f09aa2739535e6bbd1be0a4946789752a2c20d8aaef43185"
+    },
+    {
+      "path": "components/ui/native-select.tsx",
+      "size_bytes": 1995,
+      "sha256": "007516b111fca8c98a6c40c94ab91bb68cc5b52afce1ed1f5e510c3d86e7347c"
+    },
+    {
+      "path": "components/ui/navigation-menu.tsx",
+      "size_bytes": 6658,
+      "sha256": "889d358a77de88e9cb6f39ea4895ea4c76eaf01d731b74e44f1c41e97a78a044"
+    },
+    {
+      "path": "components/ui/pagination.tsx",
+      "size_bytes": 2717,
+      "sha256": "374ad135c3d4ff3ec080a0009cd9745cdd0e12faa89d2b0e86074f11e5127fd1"
+    },
+    {
+      "path": "components/ui/popover.tsx",
+      "size_bytes": 2357,
+      "sha256": "31c350309ff5d3034e6ecf1b0eda75ba8855bdbf987fc7ad6d71f0ef07c5a447"
+    },
+    {
+      "path": "components/ui/progress.tsx",
+      "size_bytes": 755,
+      "sha256": "c8c26e8f5f041c3cdf4915347dc1d9c022f9448f149990fadcaf303e952fa57d"
+    },
+    {
+      "path": "components/ui/radio-group.tsx",
+      "size_bytes": 1460,
+      "sha256": "fe5ce39636d0818c2bf9c4eebddff893d1225fa2c81b5fa4bb8cbb39a8c913ce"
+    },
+    {
+      "path": "components/ui/resizable.tsx",
+      "size_bytes": 1815,
+      "sha256": "bc63958467aa00557c551bb0d96a5ae4c965c1e1ba2380e595949d933b132f7c"
+    },
+    {
+      "path": "components/ui/scroll-area.tsx",
+      "size_bytes": 1639,
+      "sha256": "8bd9d986b2844c9a87de825c6de4787b6739b36c3dc9a05ccf3eb107160e4043"
+    },
+    {
+      "path": "components/ui/select.tsx",
+      "size_bytes": 6353,
+      "sha256": "0b796a108a4eb5ba52d9ad938b7aea36dc56ae66c703a6d0a23dbc24f96daff3"
+    },
+    {
+      "path": "components/ui/separator.tsx",
+      "size_bytes": 694,
+      "sha256": "6da346505c8629a4668420d2a5ca48891383bbe0b0ceb14163537c671879427e"
+    },
+    {
+      "path": "components/ui/sheet.tsx",
+      "size_bytes": 4188,
+      "sha256": "63863cf2df8f8973e52b3459ac9bdbf81be1262dbc70eb53d5271ffb03488e16"
+    },
+    {
+      "path": "components/ui/sidebar.tsx",
+      "size_bytes": 21526,
+      "sha256": "4a8d73e7730a2b1fcecfca31299ed26db65c2307b84197a59c6ec7c01c7ad28e"
+    },
+    {
+      "path": "components/ui/skeleton.tsx",
+      "size_bytes": 276,
+      "sha256": "ba48dd5be5a6a1378bd4e011028654b5bf419f1e7d20ee4b9f8330c1264e7239"
+    },
+    {
+      "path": "components/ui/slider.tsx",
+      "size_bytes": 1991,
+      "sha256": "0e37484f4b416e79ac18c655cac961aefacf6e67085cfc2b320ea8af545635a3"
+    },
+    {
+      "path": "components/ui/sonner.tsx",
+      "size_bytes": 1034,
+      "sha256": "13ccc9b0fe4248e622f83a1d3b2f0566b72b5e04162d7d0c8db8945ecc71b55f"
+    },
+    {
+      "path": "components/ui/spinner.tsx",
+      "size_bytes": 331,
+      "sha256": "3e6e6e8d37fb4069f8e43e55318f8db06fbc36e6c8be0096da3c9337c1c798b9"
+    },
+    {
+      "path": "components/ui/switch.tsx",
+      "size_bytes": 1408,
+      "sha256": "386d4d4deb39f34126f9700fe9bf5393d238485dd94018bba9d154dda84c62ae"
+    },
+    {
+      "path": "components/ui/table.tsx",
+      "size_bytes": 2478,
+      "sha256": "20e5a7f224959c6b75802995706a97e9da171f693d4b6b1b436388fcd9df96f3"
+    },
+    {
+      "path": "components/ui/tabs.tsx",
+      "size_bytes": 3782,
+      "sha256": "865d0194331b9b2be36723fa79d3575dc83078b4cb941cafee87cb72fc2cff46"
+    },
+    {
+      "path": "components/ui/textarea.tsx",
+      "size_bytes": 759,
+      "sha256": "253cdeb487c73beaaccdf47fc163e36e7d5b7ae6ddf09a4f64998a109a112979"
+    },
+    {
+      "path": "components/ui/toggle-group.tsx",
+      "size_bytes": 2308,
+      "sha256": "69f643e889e933f05c1439084480d8646f66a161c7d1cf0730ee926382ade35e"
+    },
+    {
+      "path": "components/ui/toggle.tsx",
+      "size_bytes": 1565,
+      "sha256": "ba4d0b0a2b2fee75dc36dfc19e32082e721024b919050c97fd5dc70faa924e16"
+    },
+    {
+      "path": "components/ui/tooltip.tsx",
+      "size_bytes": 1830,
+      "sha256": "a0784eb77831a799fad7991df4f1b666f876201565a80175e1aa68733574a2e4"
+    },
+    {
+      "path": "db/index.ts",
+      "size_bytes": 423,
+      "sha256": "dc7610b00b918e0ffff1360a63626f16655ced3064b2eaf96095a4101fb14bcd"
+    },
+    {
+      "path": "db/leads.ts",
+      "size_bytes": 2751,
+      "sha256": "88b062307681e929a65e7141f62e575d1fe83137967179119eca82077afc3f9e"
+    },
+    {
+      "path": "db/schema.ts",
+      "size_bytes": 1006,
+      "sha256": "2144b40a36fd973828145834a338181efb0e3a5cecb5317ff6f9cc096be65985"
+    },
+    {
+      "path": "docs/catalog-assets.json",
+      "size_bytes": 3239,
+      "sha256": "8cb29582db3e7e76c52eb97a727c15862ea3f36b8c36d5741346e36d96e2f603"
+    },
+    {
+      "path": "docs/catalog-workflow.md",
+      "size_bytes": 5906,
+      "sha256": "f1dab9d9b21165e54f854c42f996ef77fa7cb3574d6aa3c6fa267426670ece25"
+    },
+    {
+      "path": "docs/copy-audit-2026-10-10.md",
+      "size_bytes": 3191,
+      "sha256": "98dcb1e1c09a5b78961abc885ac405657aa03eca966cded45c2a4f435368c8b0"
+    },
+    {
+      "path": "docs/pricing-calculator.md",
+      "size_bytes": 3602,
+      "sha256": "7f893639b1e8b0b77565fc400d486ff3aa1d5aa999aaa90a256b1c178e7fb548"
+    },
+    {
+      "path": "drizzle.config.ts",
+      "size_bytes": 148,
+      "sha256": "af081f7384aaeb0082cf422e29f139d137ca2f6a57c69b2c37b9fb1f8479867b"
+    },
+    {
+      "path": "drizzle/0000_awesome_roulette.sql",
+      "size_bytes": 626,
+      "sha256": "5a5a9522ab94f821c4f8031013ed51a8c81e97b668c2d3fce6e718042245476e"
+    },
+    {
+      "path": "drizzle/0001_freezing_ultimo.sql",
+      "size_bytes": 315,
+      "sha256": "74f853cabc2dab83409994f4937e557764e8ed02e7ee4ec9b6a46150a9f27f65"
+    },
+    {
+      "path": "drizzle/meta/0000_snapshot.json",
+      "size_bytes": 3637,
+      "sha256": "9265e18303c282c6cad340af57063d625fcdc927364925b89fa069d25f22ade9"
+    },
+    {
+      "path": "drizzle/meta/0001_snapshot.json",
+      "size_bytes": 4572,
+      "sha256": "b833c157f00f3f8f73cfb2fb65c9dfcf563e2a2abe739e7ad5b2bf4bab1d1807"
+    },
+    {
+      "path": "drizzle/meta/_journal.json",
+      "size_bytes": 349,
+      "sha256": "eb55d38dcde345312a0fe6d44146d42de19858d3c3a392e0364812e248a6177a"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "size_bytes": 846,
+      "sha256": "f22a254df7d934bbf9be499d3c969a13abb7f7f64c03f5967d0095cad81dfe06"
+    },
+    {
+      "path": "examples/d1/app/api/notes/route.ts",
+      "size_bytes": 1700,
+      "sha256": "a3d4a74fd53b7bf53e2df41f169d9d9d44a8b22aeb6d92f4e754956079af8909"
+    },
+    {
+      "path": "examples/d1/db/schema.ts",
+      "size_bytes": 370,
+      "sha256": "d89eabd95716ce404f5f7ca2a254220435be8ddce7c899d7ef461ff22ec80454"
+    },
+    {
+      "path": "hooks/use-mobile.ts",
+      "size_bytes": 565,
+      "sha256": "ad0936f84f1df79d3697bfbff9c18f8ad58431c1cbaf2359c6a853b0fcc9f28b"
+    },
+    {
+      "path": "lib/attendance.ts",
+      "size_bytes": 3143,
+      "sha256": "4f92943c5ebb1bf0b08988ad2bb226e83e61ec02d96c518cda2dd1a15cb715ee"
+    },
+    {
+      "path": "lib/brand-pages.ts",
+      "size_bytes": 7561,
+      "sha256": "918de6e59cf80433e99c0ce7b1618b91f5e94c8f3f56c19a52712d20de1fdce2"
+    },
+    {
+      "path": "lib/catalog-access.ts",
+      "size_bytes": 887,
+      "sha256": "fbda78525bdca4ad6b6340070fcd48877cedfcf8a44b82d9ac0d3c2a2f92652b"
+    },
+    {
+      "path": "lib/catalog-data.ts",
+      "size_bytes": 7805,
+      "sha256": "baeed176a458938a36bfcc7e2e2bb70363381aebf0dfbfdd4a23b0146a25f229"
+    },
+    {
+      "path": "lib/catalog-inquiry.ts",
+      "size_bytes": 975,
+      "sha256": "2d66868769e038ed56c03e99eb71c85b0a274581ba41f617f925b46a93e5f364"
+    },
+    {
+      "path": "lib/commercial-auth.ts",
+      "size_bytes": 454,
+      "sha256": "6fc74c6d3cb062399b0265f21a2d789aa45082c619f8dfa293d1676b22cc51a5"
+    },
+    {
+      "path": "lib/contact-attribution.ts",
+      "size_bytes": 2372,
+      "sha256": "1dadee0563eba8adf4218f65b1a30cb6b21a934e0a357371b8d2c820aba934f1"
+    },
+    {
+      "path": "lib/contact-submission.ts",
+      "size_bytes": 1739,
+      "sha256": "5637343ff22c32ec1b283cee92df2d9be0acb2c1129ec5196b82b027c0f7900f"
+    },
+    {
+      "path": "lib/form-options.ts",
+      "size_bytes": 413,
+      "sha256": "27c582707e2fa377af31368bb870930a6db5b10084b28723050a7984e5f2a51f"
+    },
+    {
+      "path": "lib/leads.ts",
+      "size_bytes": 2272,
+      "sha256": "ad77b37e0246bf6f0a6da6cc13398da68865747e9dc77b067df2e60f87c93157"
+    },
+    {
+      "path": "lib/pricing.ts",
+      "size_bytes": 5394,
+      "sha256": "abcd18df6e24c8c2927d1eada19254ce7b04d05f26a044f43c6583aba96e5ba3"
+    },
+    {
+      "path": "lib/responsive-images-data.ts",
+      "size_bytes": 6454,
+      "sha256": "12fe3377d1c8617f6d6cecaa88ba9232a7b22d2e0f92b3fee9ba371ed0076965"
+    },
+    {
+      "path": "lib/responsive-images.ts",
+      "size_bytes": 305,
+      "sha256": "3a1c774f0f4e78e707f6dd35666c4de9fae96ee5642ae115c9ea0a84780e431d"
+    },
+    {
+      "path": "lib/utils.ts",
+      "size_bytes": 177,
+      "sha256": "53f3d3d070f0a9082934da25b875f9499855c2b0693868dd28be8c23d8730f68"
+    },
+    {
+      "path": "next.config.ts",
+      "size_bytes": 133,
+      "sha256": "614bce25b089c3f19b1e17a6346c74b858034040154c6621e7d35303004767cc"
+    },
+    {
+      "path": "package-lock.json",
+      "size_bytes": 497666,
+      "sha256": "a8ed3541b98f94fcda50dbd412c001cb45b7a35d8ac28f3a674540990f3569b0"
+    },
+    {
+      "path": "package.json",
+      "size_bytes": 1977,
+      "sha256": "32a5b2bf6bc0787b4d0375401e87dcc63dbd9d36a5640c634ce739483828ab06"
+    },
+    {
+      "path": "postcss.config.mjs",
+      "size_bytes": 94,
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde"
+    },
+    {
+      "path": "public/about-category-display.webp",
+      "size_bytes": 144094,
+      "sha256": "4f8c5f75c5060b22bf33dc6b9e5fcc3506eb2b066f87e1adbe05a04d3c7a3517"
+    },
+    {
+      "path": "public/about-retail-execution.webp",
+      "size_bytes": 152810,
+      "sha256": "70e3855c8df00a988d6bc0c81147fdb5586d11cfa48bb3b4a7a6889d9bfa5552"
+    },
+    {
+      "path": "public/apple-touch-icon.png",
+      "size_bytes": 38117,
+      "sha256": "ed5617088b86381f88b85bcf909a771a0709099c185018539399ae535bb34e81"
+    },
+    {
+      "path": "public/arco-favicon-v3-16.png",
+      "size_bytes": 771,
+      "sha256": "f3e2c26deca8fa90bc94687f70521c845f2c6001fbb079bea3b75bd0be280db1"
+    },
+    {
+      "path": "public/arco-favicon-v3-32.png",
+      "size_bytes": 2487,
+      "sha256": "ef2874e74cf020488ada6caa087d62157b443b2851aad1e1578cdd5f2ba93bf0"
+    },
+    {
+      "path": "public/arco-favicon-v3.ico",
+      "size_bytes": 104193,
+      "sha256": "39d9f57b2c00cd26e997c89fd9868a7380e92036510746c7992d4e1fb7f3d5d7"
+    },
+    {
+      "path": "public/arco-favicon-v3.svg",
+      "size_bytes": 119563,
+      "sha256": "4ca41876b4dd6e1045663a0a2709fb4b63aace97286361eada903398743c736a"
+    },
+    {
+      "path": "public/arco-favicon.ico",
+      "size_bytes": 104193,
+      "sha256": "39d9f57b2c00cd26e997c89fd9868a7380e92036510746c7992d4e1fb7f3d5d7"
+    },
+    {
+      "path": "public/arco-favicon.svg",
+      "size_bytes": 119563,
+      "sha256": "4ca41876b4dd6e1045663a0a2709fb4b63aace97286361eada903398743c736a"
+    },
+    {
+      "path": "public/arco-hero-1024.webp",
+      "size_bytes": 95904,
+      "sha256": "3c48e283fd99c8aeadb8a6216a7d3a23344ae496807ca7cb3ea014b705e4fb09"
+    },
+    {
+      "path": "public/arco-hero-768.webp",
+      "size_bytes": 59006,
+      "sha256": "fee9768696b940c2fa060750c2bd0ba5a1ca0c0c0e227b7ae5e5471b5df3dd1f"
+    },
+    {
+      "path": "public/arco-hero.png",
+      "size_bytes": 2316590,
+      "sha256": "aadb07cd4d46ee736b6760a8223d7551fb746a088bd1ceddf5af199303f77acb"
+    },
+    {
+      "path": "public/arco-hero.webp",
+      "size_bytes": 178400,
+      "sha256": "1649665c09d84681d6b4e7dd86ba182c3dffa10bce7d28fc80b2b2e51feeadff"
+    },
+    {
+      "path": "public/arco-logo-icon-16.png",
+      "size_bytes": 771,
+      "sha256": "f3e2c26deca8fa90bc94687f70521c845f2c6001fbb079bea3b75bd0be280db1"
+    },
+    {
+      "path": "public/arco-logo-icon-32.png",
+      "size_bytes": 2487,
+      "sha256": "ef2874e74cf020488ada6caa087d62157b443b2851aad1e1578cdd5f2ba93bf0"
+    },
+    {
+      "path": "public/arco-logo-icon.ico",
+      "size_bytes": 104193,
+      "sha256": "39d9f57b2c00cd26e997c89fd9868a7380e92036510746c7992d4e1fb7f3d5d7"
+    },
+    {
+      "path": "public/arco-logo-icon.png",
+      "size_bytes": 89546,
+      "sha256": "9d2cd3a788ff5aeca3297c71b68221990b6f8374612779fcd5ba5b24ec0f510e"
+    },
+    {
+      "path": "public/arco-logo-touch-icon.png",
+      "size_bytes": 38117,
+      "sha256": "ed5617088b86381f88b85bcf909a771a0709099c185018539399ae535bb34e81"
+    },
+    {
+      "path": "public/arco-touch-icon-v3.png",
+      "size_bytes": 38117,
+      "sha256": "ed5617088b86381f88b85bcf909a771a0709099c185018539399ae535bb34e81"
+    },
+    {
+      "path": "public/arco-touch-icon.png",
+      "size_bytes": 38117,
+      "sha256": "ed5617088b86381f88b85bcf909a771a0709099c185018539399ae535bb34e81"
+    },
+    {
+      "path": "public/brands/logos/adm-metais.webp",
+      "size_bytes": 15390,
+      "sha256": "b31a094b591bdccd4a789ac694683a76f2f710fb3564de9896aba165a7794602"
+    },
+    {
+      "path": "public/brands/logos/artmill.webp",
+      "size_bytes": 17734,
+      "sha256": "b565fb0b0a2a9aaab140e6a746315010681ab952e2a17a3b8403bdf3b67c4d1f"
+    },
+    {
+      "path": "public/brands/logos/cantagallo-dark.png",
+      "size_bytes": 249897,
+      "sha256": "43cb37302943416ec79a8e37701f39edf6a2c9fe68c2585f35a4a706065e75c9"
+    },
+    {
+      "path": "public/brands/logos/cantagallo-dark.webp",
+      "size_bytes": 38060,
+      "sha256": "8649a9f9ae26c1263363c5224fad4439bf2e4accf5c1c3a49eaacb806379b40f"
+    },
+    {
+      "path": "public/brands/logos/cantagallo.webp",
+      "size_bytes": 33022,
+      "sha256": "24a74a38aceef458834a03043f3a03234b48fd4687a42134e7500d9495f4a5fc"
+    },
+    {
+      "path": "public/brands/logos/monte-novo.webp",
+      "size_bytes": 5820,
+      "sha256": "29558c4b3a576efc6bb4b3fdabd1680a0ab905cacfca04d517139e235d3d05d2"
+    },
+    {
+      "path": "public/brands/logos/orved-brock.webp",
+      "size_bytes": 7652,
+      "sha256": "45e81a1588885aaad047035760d63cb61d350f032efd1b291d8ba9076f4f2e07"
+    },
+    {
+      "path": "public/brands/logos/prime-grill.webp",
+      "size_bytes": 63328,
+      "sha256": "0253311dffa27428e66db30edf039c6c0efd72bd358cfda2139ea38fca83dcd8"
+    },
+    {
+      "path": "public/catalog/covers/cantagallo.webp",
+      "size_bytes": 112462,
+      "sha256": "784d2449f6d169b95272c9213082804dfba7d731fe83203caeb853ff2e624d6d"
+    },
+    {
+      "path": "public/catalog/covers/monte-novo.webp",
+      "size_bytes": 137046,
+      "sha256": "f4533423276484787cd5391292ee3af12e1406339234b71790a62c3b40beca4e"
+    },
+    {
+      "path": "public/catalog/covers/orved-brock.webp",
+      "size_bytes": 86654,
+      "sha256": "6186adfc82c7577e901137fc5f05004848b80781b075de895d0baeeca5cf9dc5"
+    },
+    {
+      "path": "public/catalog/covers/prime-grill.webp",
+      "size_bytes": 129476,
+      "sha256": "0317dd184c758063c69da30df4e45fe1b6dce2e3cd235ee96e649b50285280a3"
+    },
+    {
+      "path": "public/catalog/files/adm-metais.e7b386c5b8.pdf",
+      "size_bytes": 7177892,
+      "sha256": "e7b386c5b8101a63044e3d52040c74babe2753bcd41ba7c8e3f0a9bd218168e7"
+    },
+    {
+      "path": "public/catalog/files/artmill-acessorios-2025.bd1750451f.pdf",
+      "size_bytes": 9723350,
+      "sha256": "bd1750451feb134729128c51a0f99e2d291eb149318b38c6f914013116693dc0"
+    },
+    {
+      "path": "public/catalog/files/artmill-pits-2024.5cba4dd29a.pdf",
+      "size_bytes": 14401381,
+      "sha256": "5cba4dd29a7074e73a0ff00e2ad6e26f9d89c02ae2261c043317fdf9e1ed2856"
+    },
+    {
+      "path": "public/catalog/files/cantagallo-2026.dc469a82ba.pdf",
+      "size_bytes": 18223669,
+      "sha256": "dc469a82ba4906ea2e3d1e542fd6cf13505adc9d76a02098783f0376b594342f"
+    },
+    {
+      "path": "public/catalog/files/monte-novo-2026.ce6b3c3536.pdf",
+      "size_bytes": 8574841,
+      "sha256": "ce6b3c353619e181f8c278006dd9b7ce6922bce989f9908b4bb5422354881379"
+    },
+    {
+      "path": "public/catalog/files/orved-brock-2025.d861adeb50.pdf",
+      "size_bytes": 6580871,
+      "sha256": "d861adeb5007d5b85aaf166a359d417cd9b8764af72210968b2522eb696b9fe5"
+    },
+    {
+      "path": "public/catalog/files/prime-grill.7fc4d1d127.pdf",
+      "size_bytes": 2827638,
+      "sha256": "7fc4d1d1270900659a6a616edf6f20c4c141b710cf38bd041f6b84663fdd9e88"
+    },
+    {
+      "path": "public/category-execution-1024.webp",
+      "size_bytes": 59550,
+      "sha256": "2e9d8355c0c8e8f88356e3e1610887ebc1933394b845809125355a5651ec03b8"
+    },
+    {
+      "path": "public/category-execution-768.webp",
+      "size_bytes": 37268,
+      "sha256": "b2c27818ddb10876fdb68821031cb1d7dce7d5a180c9bd50fdb934cc3a31801a"
+    },
+    {
+      "path": "public/category-execution.webp",
+      "size_bytes": 115674,
+      "sha256": "045eb227dd158bb95899cfdff23174117cba94f4e0c4a8ff9992acfe7d99571f"
+    },
+    {
+      "path": "public/favicon-16x16.png",
+      "size_bytes": 771,
+      "sha256": "f3e2c26deca8fa90bc94687f70521c845f2c6001fbb079bea3b75bd0be280db1"
+    },
+    {
+      "path": "public/favicon-32x32.png",
+      "size_bytes": 2487,
+      "sha256": "ef2874e74cf020488ada6caa087d62157b443b2851aad1e1578cdd5f2ba93bf0"
+    },
+    {
+      "path": "public/favicon.ico",
+      "size_bytes": 104193,
+      "sha256": "39d9f57b2c00cd26e997c89fd9868a7380e92036510746c7992d4e1fb7f3d5d7"
+    },
+    {
+      "path": "public/favicon.svg",
+      "size_bytes": 119563,
+      "sha256": "4ca41876b4dd6e1045663a0a2709fb4b63aace97286361eada903398743c736a"
+    },
+    {
+      "path": "public/field/ativacao-original.jpeg",
+      "size_bytes": 293700,
+      "sha256": "8555b1093c9cca2e43d6b670e96b44af3a5b9bae5037d69861fadc89d8c1016f"
+    },
+    {
+      "path": "public/field/ativacao-original.webp",
+      "size_bytes": 99610,
+      "sha256": "605c28131fba13b29c41e8b77a9c7091506532508393141f08020fcfdf286590"
+    },
+    {
+      "path": "public/field/estoque-cantagallo.jpg",
+      "size_bytes": 812445,
+      "sha256": "132f79faf3ea8b9b325ecf8f63e6a5507cd78f4b914890c6236550d80927e1a8"
+    },
+    {
+      "path": "public/field/estoque-cantagallo.webp",
+      "size_bytes": 132972,
+      "sha256": "7f54a69ccead34fd4d6051a9a25975278cf0a29fec175835fee6f78a39dac3e4"
+    },
+    {
+      "path": "public/field/exposicao-original.png",
+      "size_bytes": 331865,
+      "sha256": "58374e1fefe7a524250d6d2e0edcc227090631d877866324bdf4af6000bf430b"
+    },
+    {
+      "path": "public/field/exposicao-original.webp",
+      "size_bytes": 47728,
+      "sha256": "ea729ce24a5c0e46847055ebd5bf33c97dbd2d3333ecccbf02d9655002143372"
+    },
+    {
+      "path": "public/field/secao-churrasco-poster.jpg",
+      "size_bytes": 80379,
+      "sha256": "fc1e3e1781efb27087a17ef8c0987ffc108a7124c080eb413cca844fd9b16822"
+    },
+    {
+      "path": "public/field/secao-churrasco.mp4",
+      "size_bytes": 3035149,
+      "sha256": "57303504a5ef8eab0e5b4ba322753c4acf32666d08f2f07bf711dc19318bedef"
+    },
+    {
+      "path": "public/file.svg",
+      "size_bytes": 392,
+      "sha256": "1e0ae4d1a1ddfa36752988647b731e4abf150c414d069ec83c96fb0aaeff0307"
+    },
+    {
+      "path": "public/globe.svg",
+      "size_bytes": 1036,
+      "sha256": "d051a8c47936990a9085693d307bb7cea1bc1b6d7ed956bcbaacf674f4ec96b9"
+    },
+    {
+      "path": "public/logo-arco-reverse.svg",
+      "size_bytes": 45182,
+      "sha256": "89f556d56bfbfd6f2370a57a97774c566200f5a58ad11a50e5f7953e7777ad85"
+    },
+    {
+      "path": "public/logo-arco.jpeg",
+      "size_bytes": 33461,
+      "sha256": "3aaa9c25243f835329740f60e4fac7ec2330c641c1219ad3b23b586f4c5033a5"
+    },
+    {
+      "path": "public/mapa-pernambuco.webp",
+      "size_bytes": 53980,
+      "sha256": "db8acd92bad5c7f5eec2922c246268ad7f66939a9d6fcfdb307b5674aef8668f"
+    },
+    {
+      "path": "public/method-execution-placeholder.webp",
+      "size_bytes": 124016,
+      "sha256": "385beb566e239c732bf2b9ca46eecb53b38ab7ade487f70460ebaa0f49b51d6a"
+    },
+    {
+      "path": "public/method-execution.webp",
+      "size_bytes": 98440,
+      "sha256": "0f17d745a27c151e9f127b09074b7e4a8ca8262c287e5de4542d4ba572754348"
+    },
+    {
+      "path": "public/method-origin-placeholder.webp",
+      "size_bytes": 108592,
+      "sha256": "f9208cdb98a73635a92373b892669ed0614bfbad860ddbcac64b6f118ef99939"
+    },
+    {
+      "path": "public/method-origin.webp",
+      "size_bytes": 87714,
+      "sha256": "131884a8b62c4edc69c9247e5cb70e13c0ac78bc4080678b445023cd511caa96"
+    },
+    {
+      "path": "public/method-pdv-placeholder.webp",
+      "size_bytes": 187574,
+      "sha256": "66bd9c650819fbeb0cc2816c0562466a078edfc9d608340f15188cd2780a0ac5"
+    },
+    {
+      "path": "public/method-pdv.webp",
+      "size_bytes": 133180,
+      "sha256": "ac2a91eaaa12f764f63d38043d6ab4ba7f83317fda98b005776b73f361dac974"
+    },
+    {
+      "path": "public/method-result-placeholder.webp",
+      "size_bytes": 112128,
+      "sha256": "07d86ee05547668c194753d60a1f7c10d6ada0148780fb0fadb4c97e539954b1"
+    },
+    {
+      "path": "public/method-result.webp",
+      "size_bytes": 255160,
+      "sha256": "6cc5589777eed214706453791444329e526994fecf66f361cce728bb9361f616"
+    },
+    {
+      "path": "public/partners/belo-bife.webp",
+      "size_bytes": 110394,
+      "sha256": "a40247133725b56406cbf7404ba814b425bb3e6bf684baa216ba4fbd4dcdf76c"
+    },
+    {
+      "path": "public/partners/boi-quente.webp",
+      "size_bytes": 101338,
+      "sha256": "24c7652ff31646ed3dace61ba68da14734c4cd243f3200a9d2f98e4e59a41346"
+    },
+    {
+      "path": "public/partners/bulltique-premium.webp",
+      "size_bytes": 91428,
+      "sha256": "6e4e2cf26bcc5d863c02e51b37c20d060d2b7488baf1e394f550a750f1f2ad09"
+    },
+    {
+      "path": "public/partners/carne-queijo-cachoeirinha.webp",
+      "size_bytes": 36674,
+      "sha256": "bea7a010af767c418c074843a26a31d3995eaed005d17e5a8a4f778109010d58"
+    },
+    {
+      "path": "public/partners/casa-de-carne-nelore.webp",
+      "size_bytes": 108380,
+      "sha256": "e3af5199065fbef4c1ae8e1a244ea7c3e8aeab78944f1d4bf314e31279bb96ce"
+    },
+    {
+      "path": "public/partners/casa-dos-ovos.webp",
+      "size_bytes": 125864,
+      "sha256": "dc7b9e31e4433d7ee4d23547d368a0835239bbf205ffa4f8b9eb1e4b45290549"
+    },
+    {
+      "path": "public/partners/cavalcanti-bebidas.webp",
+      "size_bytes": 28830,
+      "sha256": "664be368b331f01c9fd7add864d818600992902583163b118505335f44ccac85"
+    },
+    {
+      "path": "public/partners/comal.webp",
+      "size_bytes": 128580,
+      "sha256": "f87e9a2dd457236411fd92c82b9902777363989ecdac42e0d8913346f96dbf8c"
+    },
+    {
+      "path": "public/partners/emporio-das-carnes.webp",
+      "size_bytes": 128810,
+      "sha256": "8d59c036825228134e74e05f79c9c59caf88b512146b16b0decad3273327bf29"
+    },
+    {
+      "path": "public/partners/emporio-do-churrasco.webp",
+      "size_bytes": 103444,
+      "sha256": "7b833acb96861dfd7ff5314f0e36a566c5819da3340422e659be2396d508becf"
+    },
+    {
+      "path": "public/partners/espaco-da-carne.webp",
+      "size_bytes": 4746,
+      "sha256": "5d10b83d90a142a4e7b098e65aa750fbdef8d73ea391feeeae4da15ad7f23b1f"
+    },
+    {
+      "path": "public/partners/frigoias.webp",
+      "size_bytes": 129980,
+      "sha256": "aad691aab3b7ec575fcf772e83c426c258c70ffd1726dae57bae2c0836ad4ad5"
+    },
+    {
+      "path": "public/partners/frigorifico-galego.webp",
+      "size_bytes": 210574,
+      "sha256": "39075f1a96267bbef280c571983d9987b6434b5883497a2c7f2d6ee0c029a30c"
+    },
+    {
+      "path": "public/partners/masterboi.webp",
+      "size_bytes": 129690,
+      "sha256": "36d2bfbee6fa7560de0c335f16eac41818b5c1f304d498f17cf89caeda630e3f"
+    },
+    {
+      "path": "public/partners/multifrios.webp",
+      "size_bytes": 27420,
+      "sha256": "97a9ae566447960a1a4681a1f74116d46b1382b35f7d5bead4498e753c791bef"
+    },
+    {
+      "path": "public/partners/nsc-carnes.webp",
+      "size_bytes": 60116,
+      "sha256": "d1611d0fe904baff98bd9819c415bbced6ba08ef17bd85b3458171ef52eb8b95"
+    },
+    {
+      "path": "public/partners/pedrosa.webp",
+      "size_bytes": 106156,
+      "sha256": "cdb88881c6be8eb8edaa3d8775ffe643d3ae9653155bded441968b63d206f1c7"
+    },
+    {
+      "path": "public/partners/picanha-do-gaucho.webp",
+      "size_bytes": 119396,
+      "sha256": "950e31cbd9dd14cef0e901f69f3e469e397d603699701cb319db28f923b76897"
+    },
+    {
+      "path": "public/partners/selecta.webp",
+      "size_bytes": 82048,
+      "sha256": "91fd15d6e954d7b0f199c962cdfa1646bf5a272243785255fd6a8b681cce9b1e"
+    },
+    {
+      "path": "public/partners/trevo.webp",
+      "size_bytes": 104678,
+      "sha256": "829bebafde8c39ce8cf1b7387194e98713d816bbc5793e4a72fa34a0a8790e72"
+    },
+    {
+      "path": "public/partners/villa-frios.webp",
+      "size_bytes": 30344,
+      "sha256": "fba1e1ccceae8336602239bc07d91a550cb3543cc9b9b96f738deba733920677"
+    },
+    {
+      "path": "public/replink-owl.png",
+      "size_bytes": 761304,
+      "sha256": "02616f3e0e7e8c00c449231e5e85b1993743f7e2577d4a1584e1659c71b16401"
+    },
+    {
+      "path": "public/replink-owl.webp",
+      "size_bytes": 9300,
+      "sha256": "a0d0af5b3615c2d275491f6d3131ae84cb07d7e94f15fc72137f5aa5e9236eed"
+    },
+    {
+      "path": "public/responsive/about-category-display-320.webp",
+      "size_bytes": 62246,
+      "sha256": "fa4c790dbe46137e537b72d06040cda14fd36bc9d4feede37e8857b9d1e73dd9"
+    },
+    {
+      "path": "public/responsive/about-category-display-480.webp",
+      "size_bytes": 117626,
+      "sha256": "de77d794a096e7aadb38b48caf9de013bcaa9ff7c008f606e2b7a77dc8d9d4c7"
+    },
+    {
+      "path": "public/responsive/about-retail-execution-320.webp",
+      "size_bytes": 48332,
+      "sha256": "d4c9a6742381f9f5d740d9a2529b5e4a5de3261b5e1570612ee3e12050cca90f"
+    },
+    {
+      "path": "public/responsive/about-retail-execution-480.webp",
+      "size_bytes": 100224,
+      "sha256": "57a787db644e70f01acbd488c5b13c50fc4d4339b25a2fdb7e5df71ad8c51aa1"
+    },
+    {
+      "path": "public/responsive/about-retail-execution-640.webp",
+      "size_bytes": 150174,
+      "sha256": "589fca27a10a900d8c59d263c480a788e6ecd8e20bf877c8c5adf98c1c62789f"
+    },
+    {
+      "path": "public/responsive/catalog/covers/cantagallo-320.webp",
+      "size_bytes": 31494,
+      "sha256": "f776fc47fa733a4a3760e55b6a3b6610bb963190ad60f6d49745e063eae0b10e"
+    },
+    {
+      "path": "public/responsive/catalog/covers/cantagallo-480.webp",
+      "size_bytes": 59530,
+      "sha256": "76c75adb900b334064250f330d873ecf2bd616c33bfa529ea186306bcec57b31"
+    },
+    {
+      "path": "public/responsive/catalog/covers/cantagallo-640.webp",
+      "size_bytes": 93420,
+      "sha256": "5cdc170ebc9d126561181a8e93e4ad3805822f3fffe0f77e7c622e49e568c12d"
+    },
+    {
+      "path": "public/responsive/catalog/covers/monte-novo-320.webp",
+      "size_bytes": 33766,
+      "sha256": "b451633252199a1e17fe7eb4142f5e394d6a65fa09e85cebe4cb6f21061bc7d8"
+    },
+    {
+      "path": "public/responsive/catalog/covers/monte-novo-480.webp",
+      "size_bytes": 65414,
+      "sha256": "68174ac14e520815077a365c7c1081f3a7d79da4c1ce1b8be96259542a730522"
+    },
+    {
+      "path": "public/responsive/catalog/covers/monte-novo-640.webp",
+      "size_bytes": 102084,
+      "sha256": "56e307605663e6e87ab57fa3e180bdff6853544faa1eb6386a58c6ff118c59e1"
+    },
+    {
+      "path": "public/responsive/catalog/covers/orved-brock-320.webp",
+      "size_bytes": 27266,
+      "sha256": "bb6a62f9ec03eb1434330284bd4c09e34c289edc89f39534029e1dff35e94bab"
+    },
+    {
+      "path": "public/responsive/catalog/covers/orved-brock-480.webp",
+      "size_bytes": 50386,
+      "sha256": "5ab2cbc2f3a0fe9c501ed7f6809631830c92de537b33a6fa656264a963a6433f"
+    },
+    {
+      "path": "public/responsive/catalog/covers/orved-brock-640.webp",
+      "size_bytes": 75636,
+      "sha256": "64112613dbc951b1feb1e1304d00245783df75be86cf7041c27b98098c618be9"
+    },
+    {
+      "path": "public/responsive/catalog/covers/prime-grill-320.webp",
+      "size_bytes": 34094,
+      "sha256": "e3f4a8d65f8839a3f0eb8bdefbaf76cd4275dddc09330d39bc242dc020236e61"
+    },
+    {
+      "path": "public/responsive/catalog/covers/prime-grill-480.webp",
+      "size_bytes": 63766,
+      "sha256": "7e554f31123862d00e7c5f670e039a5e82c3dd27cf60120fd93e41bc9efd9e9c"
+    },
+    {
+      "path": "public/responsive/catalog/covers/prime-grill-640.webp",
+      "size_bytes": 99502,
+      "sha256": "4a503425ec5bd49b5b56d68e67b56e3b524330641f2351ebee6c53f3ccc93e1b"
+    },
+    {
+      "path": "public/responsive/field/ativacao-original-320.webp",
+      "size_bytes": 48990,
+      "sha256": "bcbfabb2399b0d3eb0c9a21082e1866a53ecfb297b17ce0d2cc88cb53fba55d0"
+    },
+    {
+      "path": "public/responsive/field/ativacao-original-480.webp",
+      "size_bytes": 90482,
+      "sha256": "4b0eda9a614d2f7803c94f483b8d3cd3dc8a773a16feaf21a563d80e6ba86539"
+    },
+    {
+      "path": "public/responsive/field/estoque-cantagallo-320.webp",
+      "size_bytes": 54338,
+      "sha256": "1899f2ac7b0d6fe1263590cd12fe875f2eceabff31f3272c4b5378c6009885e4"
+    },
+    {
+      "path": "public/responsive/field/estoque-cantagallo-480.webp",
+      "size_bytes": 99322,
+      "sha256": "0a3e10fc010fd6559f0238d2f7a13757f719a5eb311938846083995d9550dd62"
+    },
+    {
+      "path": "public/responsive/field/exposicao-original-320.webp",
+      "size_bytes": 34818,
+      "sha256": "c252bb9caeb12bbe5a1e8f4184d4dca443a5fcc9850915cf9ffa7808ee4b0142"
+    },
+    {
+      "path": "public/responsive/method-execution-320.webp",
+      "size_bytes": 49262,
+      "sha256": "f0bdb6b8aa15be129d11d3730a1796df611c803c99ff97bf5e1b02bde526990f"
+    },
+    {
+      "path": "public/responsive/method-execution-480.webp",
+      "size_bytes": 86346,
+      "sha256": "3b8ced0d9602f93ca14fb4430d0105844d520aa6d9975cfea390d38fa32784af"
+    },
+    {
+      "path": "public/responsive/method-origin-320.webp",
+      "size_bytes": 20470,
+      "sha256": "10bce8b441298393d952539389c432192a9a6c50332f456dc5a8acfac4aa2f35"
+    },
+    {
+      "path": "public/responsive/method-origin-480.webp",
+      "size_bytes": 38178,
+      "sha256": "766276308f210cb06580e898d8747fd37d627f9716406f6e857689a9e1c455b6"
+    },
+    {
+      "path": "public/responsive/method-origin-640.webp",
+      "size_bytes": 64354,
+      "sha256": "02bb4700a041befbece28a1affb537f690e2e2bceb5d1d634bbc653ff6cd464a"
+    },
+    {
+      "path": "public/responsive/method-pdv-320.webp",
+      "size_bytes": 26894,
+      "sha256": "0195e701fa101df868d12f99f381cf706a69327bd4061e4fb8c41cefa5e847b0"
+    },
+    {
+      "path": "public/responsive/method-pdv-480.webp",
+      "size_bytes": 50916,
+      "sha256": "55649e0518adef53591da59085d8df2c54d305a979486ff7fd594b03ec6745b2"
+    },
+    {
+      "path": "public/responsive/method-pdv-640.webp",
+      "size_bytes": 85592,
+      "sha256": "13af10d6dd582de7149a57e595dfb7434146cd80592994b4dded8ff1d368732b"
+    },
+    {
+      "path": "public/responsive/method-result-320.webp",
+      "size_bytes": 76064,
+      "sha256": "ed1c7880c70968f43659e9d2c485051757791aab7b74c5d7d7de4ac28c792cd7"
+    },
+    {
+      "path": "public/responsive/method-result-480.webp",
+      "size_bytes": 157186,
+      "sha256": "dea6fe7928a22577c75a3a3522e934d5f3bf92b29877c845073e9ad4955129c8"
+    },
+    {
+      "path": "public/responsive/partners/belo-bife-320.webp",
+      "size_bytes": 33386,
+      "sha256": "9cab5ddd179d3a2ae24ad1152256ddd8907186354fcd78a430ef15b76aeb2afc"
+    },
+    {
+      "path": "public/responsive/partners/belo-bife-480.webp",
+      "size_bytes": 70840,
+      "sha256": "940bdf256f304837aa20d5ce56f6b550db1b3e52133252fa6aa079f0609746b0"
+    },
+    {
+      "path": "public/responsive/partners/boi-quente-320.webp",
+      "size_bytes": 22550,
+      "sha256": "e1b78201f86ee10f872988c7ae51b5ac66d99011fd21eb75f0b260e3aa841e7b"
+    },
+    {
+      "path": "public/responsive/partners/boi-quente-480.webp",
+      "size_bytes": 43030,
+      "sha256": "a20fbb5d8aaa9ecc8a14108275eeff5019d915362436acc8157479e9458e1a82"
+    },
+    {
+      "path": "public/responsive/partners/boi-quente-640.webp",
+      "size_bytes": 71656,
+      "sha256": "66e7d8bd1f166acb99bce34271509874324b18a37185489d2ff862860c926ec2"
+    },
+    {
+      "path": "public/responsive/partners/bulltique-premium-320.webp",
+      "size_bytes": 18374,
+      "sha256": "43d815e9b17db1a9c60eca9d0de03195b41b8975e595196b946bcd5b68d8d354"
+    },
+    {
+      "path": "public/responsive/partners/bulltique-premium-480.webp",
+      "size_bytes": 36060,
+      "sha256": "badd8ef7a27a4517ef1b810e7a6251d8df6e4f4b8e27e330bdc6a92f9d07cdc6"
+    },
+    {
+      "path": "public/responsive/partners/bulltique-premium-640.webp",
+      "size_bytes": 59530,
+      "sha256": "1b8aa6bb3b2ded1fa9d12cde4f1e6e1f65a7cf017b0b88fb99fa134ebd9f69a6"
+    },
+    {
+      "path": "public/responsive/partners/carne-queijo-cachoeirinha-320.webp",
+      "size_bytes": 28730,
+      "sha256": "d45fd07e2f3f2705f04f78ae1c9751b6e45f4f42f7762ee1b3e520fdbe512df7"
+    },
+    {
+      "path": "public/responsive/partners/casa-de-carne-nelore-320.webp",
+      "size_bytes": 19908,
+      "sha256": "2ac129996713e6ee9211ecbbe0aa625aac39257127874a33d2bec90abfeda955"
+    },
+    {
+      "path": "public/responsive/partners/casa-de-carne-nelore-480.webp",
+      "size_bytes": 39618,
+      "sha256": "88b38233ecbfa6c5d80dac2f1cb395846eee9b21bc4a8a7b408662939f349ca4"
+    },
+    {
+      "path": "public/responsive/partners/casa-de-carne-nelore-640.webp",
+      "size_bytes": 63378,
+      "sha256": "c7623ca00f8adcb153ba89b236f275a41542528acc1a024a2a5e7b08652142f8"
+    },
+    {
+      "path": "public/responsive/partners/casa-dos-ovos-320.webp",
+      "size_bytes": 29498,
+      "sha256": "2804b9d7cf24681c6450bc43a091acbe803224ae0a3ba7e6bc6293d6c76b9f18"
+    },
+    {
+      "path": "public/responsive/partners/casa-dos-ovos-480.webp",
+      "size_bytes": 56374,
+      "sha256": "5a975487ba044d1b915dc952a351ab82d6d6e8722933831b19fe91a21a04d443"
+    },
+    {
+      "path": "public/responsive/partners/casa-dos-ovos-640.webp",
+      "size_bytes": 90386,
+      "sha256": "df6ba731cde1dc9906687fc534433db82b0d9bcc4b03169cd0c75f8ea8a0c2c6"
+    },
+    {
+      "path": "public/responsive/partners/cavalcanti-bebidas-320.webp",
+      "size_bytes": 28706,
+      "sha256": "80b6eac8cf94d646982778cacda18e3506f68db27a5e30e30e58490890c02611"
+    },
+    {
+      "path": "public/responsive/partners/comal-320.webp",
+      "size_bytes": 19760,
+      "sha256": "b18b430bf309c77e2a9151b6c44d5f4644659a36cc4c8618680effdb773eb839"
+    },
+    {
+      "path": "public/responsive/partners/comal-480.webp",
+      "size_bytes": 41272,
+      "sha256": "747f87dd577e9a5f4a0adabedbb93aed7c558911b8f4e66c01eb14ce5387d16f"
+    },
+    {
+      "path": "public/responsive/partners/comal-640.webp",
+      "size_bytes": 69040,
+      "sha256": "2b36125121fa298e008af520dc00bac6d36ed5fe8c628e04dc3c99f265fe91e6"
+    },
+    {
+      "path": "public/responsive/partners/emporio-das-carnes-320.webp",
+      "size_bytes": 25462,
+      "sha256": "52587a4c13e4c014a34c759ccb5d3a492e9c047dab844dd083b0689f21f829be"
+    },
+    {
+      "path": "public/responsive/partners/emporio-das-carnes-480.webp",
+      "size_bytes": 49188,
+      "sha256": "2ce13889e9e3cfe5094fa4e4a996a797ff175491d3b966bb8f2549d7d9271481"
+    },
+    {
+      "path": "public/responsive/partners/emporio-das-carnes-640.webp",
+      "size_bytes": 77244,
+      "sha256": "ca47ac92e0d9b4b4223cd5907fa350ef6be2d807bb41fe56f8920c948cb30666"
+    },
+    {
+      "path": "public/responsive/partners/emporio-do-churrasco-320.webp",
+      "size_bytes": 37054,
+      "sha256": "f8f1591cf91416d55a97492d3cef653d5d93c25f203f10ad9847a21d2b8f21a7"
+    },
+    {
+      "path": "public/responsive/partners/emporio-do-churrasco-480.webp",
+      "size_bytes": 73580,
+      "sha256": "44a665f9b6c239443593e90c231ac00896adeb60b11dd01ce8aa15aca821ad3d"
+    },
+    {
+      "path": "public/responsive/partners/frigoias-320.webp",
+      "size_bytes": 27078,
+      "sha256": "23383854832d6e574590aaa124ab4eaa0d37e4972d029e3d6ac14d04b65415ac"
+    },
+    {
+      "path": "public/responsive/partners/frigoias-480.webp",
+      "size_bytes": 54550,
+      "sha256": "7012d5cf7e81927cd2091f340d277751fd6ba2cca848d2f8a0c35bfcf8cdf2f7"
+    },
+    {
+      "path": "public/responsive/partners/frigoias-640.webp",
+      "size_bytes": 85370,
+      "sha256": "66597bfbc2b58ff06fec16bfa8f7014329a01546086898a414a648cbddc7aaae"
+    },
+    {
+      "path": "public/responsive/partners/frigorifico-galego-320.webp",
+      "size_bytes": 25790,
+      "sha256": "ab8f6dc234a087d8898dc0fc31ffe009206fb076fd0025061945bff9e418ddf4"
+    },
+    {
+      "path": "public/responsive/partners/frigorifico-galego-480.webp",
+      "size_bytes": 54990,
+      "sha256": "9728e8c63fcb7c586803addc0e16e270160b951aded7ac1dfb0aea3f10c9dc8f"
+    },
+    {
+      "path": "public/responsive/partners/frigorifico-galego-640.webp",
+      "size_bytes": 92324,
+      "sha256": "b89596efe9d2d91afe2897839b8836f9cada75975ea6fa7203575dd8661e6bc3"
+    },
+    {
+      "path": "public/responsive/partners/frigorifico-galego-960.webp",
+      "size_bytes": 175946,
+      "sha256": "3982db57aa7fb4054f87c35148843244e1060ff412b8cce0b85c635632127677"
+    },
+    {
+      "path": "public/responsive/partners/masterboi-320.webp",
+      "size_bytes": 23552,
+      "sha256": "f8dd458dfa2a81603e440f7beed6c161f118f2c66dce365da20544aaa24adc21"
+    },
+    {
+      "path": "public/responsive/partners/masterboi-480.webp",
+      "size_bytes": 47608,
+      "sha256": "8f4164e11f6614267f9ccf3e87c794ea3ebb66a930b695a1c51338cd0f7f7b7d"
+    },
+    {
+      "path": "public/responsive/partners/masterboi-640.webp",
+      "size_bytes": 81672,
+      "sha256": "9956690862c49f41ccdd988c1dd3a4c9159b07b27c15fadbded55e0a4043ebe0"
+    },
+    {
+      "path": "public/responsive/partners/multifrios-320.webp",
+      "size_bytes": 19572,
+      "sha256": "964e6ae2820d77e0c46846b8b2ef557d4720231de351abf6f308b744a77154c3"
+    },
+    {
+      "path": "public/responsive/partners/nsc-carnes-320.webp",
+      "size_bytes": 32666,
+      "sha256": "53b6b653703ccf8767c8bcd24d2dee2387e60feafb929e54b786fe670adb58c9"
+    },
+    {
+      "path": "public/responsive/partners/pedrosa-320.webp",
+      "size_bytes": 23338,
+      "sha256": "b45f93759df5b7ed52f59b9e96c19cb2cd48a70c76e7decf2aaa8dbc4ccc14be"
+    },
+    {
+      "path": "public/responsive/partners/pedrosa-480.webp",
+      "size_bytes": 43946,
+      "sha256": "03f38ad642c0f4cf5a5fce77c97f0ce4fa25f28fa159e9ed6110a26f5c648cf7"
+    },
+    {
+      "path": "public/responsive/partners/pedrosa-640.webp",
+      "size_bytes": 74900,
+      "sha256": "07d98ada7aeba4f469278ab658ff07c32ab2c5101abc38d1870bd07586a76674"
+    },
+    {
+      "path": "public/responsive/partners/picanha-do-gaucho-320.webp",
+      "size_bytes": 18046,
+      "sha256": "717d257e2d98f8a2063aaf92a5aed87ca8f1c9c3f4686eba6748eda497f1fff6"
+    },
+    {
+      "path": "public/responsive/partners/picanha-do-gaucho-480.webp",
+      "size_bytes": 38810,
+      "sha256": "f30458e7708cc32655aedbdee504b91659eba127fea4510389c786a2517e3128"
+    },
+    {
+      "path": "public/responsive/partners/picanha-do-gaucho-640.webp",
+      "size_bytes": 63462,
+      "sha256": "f7ad1c54255d313e91afa26ff19188faa4dcb2c50c65dc96a81f66d36a9678a2"
+    },
+    {
+      "path": "public/responsive/partners/selecta-320.webp",
+      "size_bytes": 18906,
+      "sha256": "d84c3c5ac37c0368a020aaf4538ddbef126b4b82ae3212701b3e1a697849caad"
+    },
+    {
+      "path": "public/responsive/partners/selecta-480.webp",
+      "size_bytes": 35862,
+      "sha256": "d2e1f0872245869b8387b488b65e1e859f9a77c7c9c5172776d301cc98661690"
+    },
+    {
+      "path": "public/responsive/partners/selecta-640.webp",
+      "size_bytes": 60586,
+      "sha256": "14f6181cfc61cbada2f704a73c5e437a553e09c0984b878a3e0e6fb11f9ef379"
+    },
+    {
+      "path": "public/responsive/partners/trevo-320.webp",
+      "size_bytes": 20470,
+      "sha256": "9b90f73043c66a0865d66afc141bf0da67a3164be263588b40fff5436f256ba1"
+    },
+    {
+      "path": "public/responsive/partners/trevo-480.webp",
+      "size_bytes": 39968,
+      "sha256": "d90fa76316dbecfe88e676208dcf3e1b47a6e83b3d39273bbc277dc502cc9d3a"
+    },
+    {
+      "path": "public/responsive/partners/trevo-640.webp",
+      "size_bytes": 68918,
+      "sha256": "22fd9e0957433c47a92dc46b4311c4fbef7eac9a9750102ed25049e0090841e2"
+    },
+    {
+      "path": "public/responsive/partners/villa-frios-320.webp",
+      "size_bytes": 27224,
+      "sha256": "a42919caaebd15d3b9c8f481308ec8686c60ffe1d343a3168993f357197a603c"
+    },
+    {
+      "path": "public/window.svg",
+      "size_bytes": 386,
+      "sha256": "decf1cf7bb22b5c99c4857cfcd5718ce5465c4454166317589c83fc73df74b66"
+    },
+    {
+      "path": "scripts/build-verified.sh",
+      "size_bytes": 661,
+      "sha256": "2ae5329ac860076070c9217a43106a15cb5ecf907a0f7baeb9ef903f76b53c68"
+    },
+    {
+      "path": "scripts/check-contact-flow.mjs",
+      "size_bytes": 12477,
+      "sha256": "0977b73952ce385b86e723e49c4d19509c86db84bc557e4577ad590850199ecc"
+    },
+    {
+      "path": "scripts/check-discovery.mjs",
+      "size_bytes": 9231,
+      "sha256": "0e590f3b2067d8873a9dc269f6b9ed29dcc8b5f2f66cf8e5e540873fa66f2770"
+    },
+    {
+      "path": "scripts/check-presence.mjs",
+      "size_bytes": 4040,
+      "sha256": "5459d0fa1419ceab1f8a0fb3fe5f8e4437c162bba74f8c7540ed04f397b40977"
+    },
+    {
+      "path": "scripts/check-pricing.mjs",
+      "size_bytes": 5897,
+      "sha256": "ea1f3d0978e344fdfd86da12fa49ef21fd4f329c489e515790e9ae382352341c"
+    },
+    {
+      "path": "scripts/execution-profile.mjs",
+      "size_bytes": 624,
+      "sha256": "2e71116f4d2b70cff8bb70436f8dd5c709ec7ff62893424530f404e0193d3630"
+    },
+    {
+      "path": "scripts/generate-responsive-images.mjs",
+      "size_bytes": 2206,
+      "sha256": "99ead0a0935a6370ca38d544de75bd2a6721a3fa7397be281f40f78b1c4dfaeb"
+    },
+    {
+      "path": "scripts/install-ci.mjs",
+      "size_bytes": 1616,
+      "sha256": "63f2c4589b740184b68a0c9214fe92439b6f7d1fbfbec9ef552fd745b0a9c6cc"
+    },
+    {
+      "path": "scripts/install-ci.sh",
+      "size_bytes": 7471,
+      "sha256": "2d04c0f3879c756a7a7b4b000e05d75cf98214ac3d1be2fc44327007d122176b"
+    },
+    {
+      "path": "scripts/run-framework.mjs",
+      "size_bytes": 993,
+      "sha256": "9bf9f41a29314cabe0238b8e9c540ec3f7b5a6adafc7c8fb6c3940722d061dca"
+    },
+    {
+      "path": "scripts/sites-env.mjs",
+      "size_bytes": 906,
+      "sha256": "5de99d6806b01f0ee0b941af3684d75dcf1afbbcff22cb95bfa2e584c5dafa88"
+    },
+    {
+      "path": "scripts/sites-env.sh",
+      "size_bytes": 1530,
+      "sha256": "df86ebfc27d2f00860036658e933ac0ddd7b5f6879aa5d51218f0863c7e1fb60"
+    },
+    {
+      "path": "tsconfig.json",
+      "size_bytes": 800,
+      "sha256": "7199c6e4e400921e8049729840165a39f1476fa97901bed00239e7697bfe8da4"
+    },
+    {
+      "path": "vendor/shadcn-tailwind-4.13.0.LICENSE.md",
+      "size_bytes": 1063,
+      "sha256": "1564074e13439397221ffd522e2e504d56561994a23d371aa5e3ad43e4f5423f"
+    },
+    {
+      "path": "vendor/shadcn-tailwind-4.13.0.css",
+      "size_bytes": 16041,
+      "sha256": "bc7d83425702955b4cb67cb14ede9d603f9d912376d57a2d81d661094d2a782a"
+    },
+    {
+      "path": "vite.config.ts",
+      "size_bytes": 2240,
+      "sha256": "4b9d8a6b14fd155328847bc6cd063c6bf44c58c64de8d46911cdf0ede611e367"
+    }
+  ]
+}

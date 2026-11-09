@@ -1,0 +1,12 @@
+.page { background: #f3f6fb; color: #061142; padding-block: clamp(2rem, 5vw, 4rem); }
+.layout { display: grid; grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.intro h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; line-height: 1.08; letter-spacing: -.035em; margin-top: 1rem; }
+.intro > p:last-of-type { margin-top: 1.25rem; font-size: 1rem; color: #526178; line-height: 1.6; }
+.commerce { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #d4deec; }
+.commerce h2 { font-size: 1.25rem; font-weight: 750; }
+.commerce p { margin-block: .75rem 1rem; font-size: 1rem; line-height: 1.6; color: #526178; }
+.commerce a { display: flex; min-height: 48px; align-items: center; justify-content: center; border: 1px solid #c6d6e9; border-radius: 6px; padding: .75rem 1rem; margin-top: .5rem; font-size: .9375rem; font-weight: 750; text-align: center; }
+.commerce .buy { background: #0454c6; border-color: #0454c6; color: white; }
+.commerce a:hover { background: #061142; color: white; }
+.card { padding: clamp(1rem, 3vw, 2rem); background: white; border: 1px solid #dbe4f0; border-radius: 10px; min-width: 0; }
+@media (max-width: 900px) { .layout { grid-template-columns: 1fr; gap: 1.5rem; } .commerce { margin-top: 1.25rem; padding-top: 1rem; } .commerce p { font-size: .9375rem; } }

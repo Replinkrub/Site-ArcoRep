@@ -1,16 +1,21 @@
+
+import SiteImage from "@/components/site-image";
+import Link from "@/components/site-link";
 import type { Metadata } from "next";
 import { ArrowRight, Building2, MapPin, Store } from "lucide-react";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { Button } from "@/components/ui/button";
-import { whatsappUrl } from "@/lib/catalog-data";
+import { buttonVariants } from "@/components/ui/button";
+import { arcoContact } from "@/lib/catalog-data";
+import { attendanceUrl } from "@/lib/attendance";
+import { responsiveImage } from "@/lib/responsive-images";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Quem somos | ARCO Representações",
   description:
-    "Conheça a ARCO: representação comercial B2B construída no varejo de Pernambuco desde 2018.",
+    "Desde 2018 no varejo de Pernambuco. Conheça como a ARCO atende lojistas e indústrias, da escolha dos produtos ao planejamento da reposição.",
 };
 
 const proof = [
@@ -25,17 +30,15 @@ export default function QuemSomosPage() {
       <SiteHeader />
       <main className={styles.page}>
         <section className={styles.hero} aria-labelledby="about-title">
-          <img src="/about-retail-execution.webp" alt="" aria-hidden="true" className={styles.heroImage} />
+          <SiteImage src="/about-retail-execution.webp" {...responsiveImage("/about-retail-execution.webp", "(max-width: 760px) 1100px, 100vw")} alt="" aria-hidden="true" className={styles.heroImage} />
           <div className={styles.heroOverlay} aria-hidden="true" />
           <div className={`page-shell ${styles.heroContent}`}>
             <p className={styles.kicker}>Quem somos</p>
-            <h1 id="about-title">Representação comercial construída no varejo.</h1>
+            <h1 id="about-title">Quem conhece a loja representa melhor.</h1>
             <p>
-              Desde 2018, a ARCO conecta indústrias ao varejo alimentar de Pernambuco, com alimentos, acessórios e equipamentos para a seção churrasco.
+              Desde 2018, representamos marcas para o varejo alimentar de Pernambuco, com foco na seção churrasco. Ajudamos sua loja a escolher as linhas, conferir as condições e planejar a reposição.
             </p>
-            <Button asChild className={styles.primaryButton}>
-              <a href="/catalogos">Conhecer as representadas <ArrowRight /></a>
-            </Button>
+            <Link prefetch={true} href="/catalogos" className={buttonVariants({ className: styles.primaryButton })}>Ver marcas e catálogos</Link>
           </div>
         </section>
 
@@ -53,17 +56,17 @@ export default function QuemSomosPage() {
         <section className={styles.definition}>
           <div className={`page-shell ${styles.definitionGrid}`}>
             <div className={styles.definitionMedia}>
-              <img src="/about-category-display.webp" alt="Exposição organizada da seção churrasco em um ponto de venda" loading="lazy" decoding="async" />
+              <SiteImage src="/about-category-display.webp" {...responsiveImage("/about-category-display.webp", "(max-width: 760px) calc(100vw - 32px), (max-width: 900px) calc(100vw - 48px), 520px")} alt="Exposição organizada da seção churrasco em um ponto de venda" loading="lazy" decoding="async" />
               <span>Execução comercial no ponto de venda</span>
             </div>
             <div className={styles.definitionCopy}>
-              <p className={styles.kicker}>A operação</p>
-              <h2>Do mix ao acompanhamento em loja.</h2>
+              <p className={styles.kicker}>Como trabalhamos</p>
+              <h2>A rotina da loja orienta cada pedido.</h2>
               <p>
-                Orientamos a escolha das linhas conforme o perfil da loja, seu espaço e seu público. O atendimento continua com acompanhamento comercial, exposição no ponto de venda e planejamento de reposição.
+                Antes de indicar uma linha, buscamos entender o público, o espaço de exposição e os produtos que a loja já trabalha. Depois do pedido, acompanhamos o histórico de compras para orientar reposições e ajustes.
               </p>
               <p>
-                Atendemos empresas com CNPJ, como supermercados, açougues, empórios e lojas especializadas. Clientes cadastrados também podem consultar condições e fazer pedidos pelo Mercos.
+                O lojista conta com apoio na escolha e no pedido, orientação de exposição e contato comercial para tratar as demandas após a venda. Atendemos supermercados, açougues, empórios e lojas especializadas com CNPJ.
               </p>
             </div>
           </div>
@@ -72,26 +75,27 @@ export default function QuemSomosPage() {
         <section className={styles.audiences}>
           <div className="page-shell">
             <header className={styles.sectionHeading}>
-              <p className={styles.kicker}>Duas pontas, uma operação</p>
-              <h2>Indústria e varejo conectados em Pernambuco.</h2>
+              <p className={styles.kicker}>Para quem atuamos</p>
+              <h2>A necessidade da loja. O mercado da indústria.</h2>
             </header>
             <div className={styles.audienceGrid}>
               <article>
                 <Store aria-hidden="true" />
                 <div>
                   <span>Para o varejo</span>
-                  <h3>Uma categoria mais fácil de comprar, expor e repor.</h3>
-                  <p>Orientação na escolha de produtos, apoio no pedido e acompanhamento da exposição e da reposição.</p>
-                  <a className="audience-contact-link" href={whatsappUrl("Olá, Antonio. Quero montar o mix da seção churrasco para minha loja.")} target="_blank" rel="noreferrer">Montar o mix da minha loja <ArrowRight /></a>
+                  <h3>Escolher com critério. Repor com planejamento.</h3>
+                  <p>Primeiro mix, novas linhas ou reposição: ajudamos a avaliar o que cabe na operação e a confirmar as condições de cada marca.</p>
+                  <a className="audience-contact-link" href={arcoContact.orderPlatformUrl} target="_blank" rel="noopener noreferrer">Já tenho acesso: fazer pedido</a>
+                  <a className="audience-contact-link" href={arcoContact.registrationUrl} target="_blank" rel="noopener noreferrer">Solicitar acesso para comprar</a>
                 </div>
               </article>
               <article>
                 <Building2 aria-hidden="true" />
                 <div>
                   <span>Para a indústria</span>
-                  <h3>Presença de marca com leitura real do mercado.</h3>
-                  <p>Relacionamento com uma base comercial de mais de 1.000 clientes e acompanhamento das oportunidades no varejo de Pernambuco.</p>
-                  <a className="audience-contact-link" href={whatsappUrl("Olá, Antonio. Sou de uma indústria e quero conversar sobre representação em Pernambuco.")} target="_blank" rel="noreferrer">Conversar sobre representação <ArrowRight /></a>
+                  <h3>Representação com leitura do ponto de venda.</h3>
+                  <p>Uma base comercial com mais de 1.000 clientes e experiência no varejo de Pernambuco para avaliar onde o portfólio pode entrar e como acompanhar a recompra.</p>
+                  <Link prefetch={true} className="audience-contact-link" href={attendanceUrl("industria")}>Conversar sobre representação</Link>
                 </div>
               </article>
             </div>
@@ -102,12 +106,12 @@ export default function QuemSomosPage() {
           <div className={`page-shell ${styles.presenceGrid}`}>
             <div>
               <p className={styles.kicker}>Presença comercial</p>
-              <h2>Perto da loja. Perto da oportunidade.</h2>
+              <h2>Conhecer o mercado passa por conhecer as lojas.</h2>
             </div>
             <div className={styles.presenceCopy}>
               <MapPin aria-hidden="true" />
-              <p>Base em Pernambuco, com atuação comercial próxima ao varejo alimentar do estado.</p>
-              <a href="/#presenca">Ver nossa presença <ArrowRight /></a>
+              <p>Veja lojas e registros do nosso trabalho em Pernambuco.</p>
+              <Link prefetch={true} href="/#presenca">Ver lojas na nossa trajetória <ArrowRight /></Link>
             </div>
           </div>
         </section>
@@ -115,14 +119,12 @@ export default function QuemSomosPage() {
         <section className={styles.cta}>
           <div className={`page-shell ${styles.ctaGrid}`}>
             <div>
-              <p>Próximo passo</p>
-              <h2>Vamos construir uma oportunidade comercial juntos?</h2>
+              <p>Converse com a ARCO</p>
+              <h2>Vamos conversar sobre os produtos para sua loja?</h2>
             </div>
             <div className={styles.ctaActions}>
-              <Button asChild className={styles.primaryButton}>
-                <a href={whatsappUrl()} target="_blank" rel="noreferrer">Falar com a ARCO <ArrowRight /></a>
-              </Button>
-              <a href="/catalogos">Ver representadas</a>
+              <Link prefetch={true} href={attendanceUrl()} className={buttonVariants({ className: styles.primaryButton })}>Solicitar atendimento</Link>
+              <Link prefetch={true} href="/catalogos">Ver representadas</Link>
             </div>
           </div>
         </section>

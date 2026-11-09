@@ -1,39 +1,63 @@
 # Site ARCO Representações
 
-Site institucional da ARCO Representações Comerciais, com foco no varejo alimentar de Pernambuco e na seção churrasco.
+Site comercial da ARCO para o varejo alimentar de Pernambuco: representadas,
+catálogos, captação de interessados, atendimento, calculadora de preços e área
+restrita para consulta e exportação dos contatos.
 
-- **Site publicado:** https://arco-representacoes.antonioaquino.chatgpt.site
-- **Repositório dedicado:** https://github.com/Replinkrub/Site-ArcoRep
-- **Base importada:** versão publicada 50, código Sites `3a913cdf8185e17e67bee292ac6f2db3afef0a3a`, em 02/10/2026.
+- Site publicado: https://arco-representacoes.antonioaquino.chatgpt.site
+- Código-fonte: https://github.com/Replinkrub/Site-ArcoRep
 
-## Desenvolvimento
+## Desenvolvimento e verificação
 
-Requer Node.js 22.13 ou superior e npm. Um clone novo utiliza o perfil portátil automaticamente.
+Requer Node.js 22.13 ou superior e npm. Em um clone novo:
 
-```bash
-git clone https://github.com/Replinkrub/Site-ArcoRep.git
-cd Site-ArcoRep
+```sh
 npm ci
 npm run dev
 ```
 
-A prévia local abre em `http://localhost:5173`. Para compilar: `npm run build`.
+O perfil portátil usa a prévia local informada pelo servidor, normalmente na
+porta 5173. Para verificar uma alteração:
 
-## Organização
+```sh
+node node_modules/typescript/bin/tsc --noEmit --incremental false
+npm run lint
+node scripts/check-contact-flow.mjs
+node scripts/check-discovery.mjs
+node scripts/check-presence.mjs
+node scripts/check-pricing.mjs
+npm run build
+```
 
-- `app/`: Home, Catálogos, Quem Somos e Perguntas Frequentes.
-- `components/`: navegação, carrosséis e componentes da interface.
-- `lib/catalog-data.ts`: dados das representadas e catálogos.
-- `public/`: imagens, logos, favicons e vídeo usados no site.
-- `.openai/hosting.json`: vínculo com a publicação existente no Sites.
+Os testes de contatos usam SQLite descartável em memória, sem consultar ou
+alterar registros comerciais da publicação.
 
-## Publicação e continuidade
+## Banco de dados e acesso comercial
 
-O GitHub guarda o código-fonte e os arquivos reais do site. A hospedagem atual continua no Sites; enviar código para este repositório não publica automaticamente uma nova versão.
+Os formulários e a área comercial dependem de Cloudflare D1. O arquivo
+`.openai/hosting.json` precisa declarar `"d1": "DB"`, o mesmo nome consumido
+pelas rotas e pelos helpers de banco. Deixar esse campo como `null` permite
+compilar, mas impede salvar e consultar os contatos em execução.
 
-Preservar o projeto Sites existente ao publicar alterações. Não criar um site substituto nem alterar seu acesso como parte de uma atualização de código.
+As migrações estão em `drizzle/`. A publicação pelo fluxo do Sites preserva o
+projeto existente e aplica as migrações pendentes. Os comandos locais descritos
+abaixo usam somente o banco de desenvolvimento.
 
-`STATUS-ARCO.md` registra uma etapa histórica de 23/09/2026 e não descreve o estado atual de todas as funcionalidades.
+A variável de execução `ARCO_ADMIN_EMAIL` define a conta autorizada a consultar
+e exportar contatos. Configure-a no ambiente de hospedagem; não publique
+credenciais, tokens nem arquivos `.env` no repositório.
+
+## Organização e publicação
+
+- `app/`: páginas públicas, área comercial e APIs de contatos.
+- `components/`: interface, formulários, calculadora e acesso aos catálogos.
+- `lib/`: dados das marcas, regras comerciais e validações.
+- `public/`: imagens, vídeos e PDFs dos catálogos.
+- `docs/`: fluxos e referências de implementação.
+
+O merge no GitHub atualiza o código-fonte. A publicação continua no Sites e usa
+o projeto já identificado em `.openai/hosting.json`. Preserve sua identidade,
+os vínculos de dados e a configuração de acesso ao publicar.
 
 ## Referência técnica do starter
 

@@ -43,6 +43,19 @@ const NETWORK_NODES: NetworkPoint[] = (() => {
   return points;
 })();
 
+export function PresenceMap() {
+  return (
+    <div className="home-presence-map-stage" aria-hidden="true">
+      <div className="home-presence-map-area" data-presence-map>
+        <svg className="home-presence-fallback" viewBox="0 0 1 1" preserveAspectRatio="none">
+          <polygon points={PERNAMBUCO_OUTLINE.map(([x, y]) => `${x},${y}`).join(" ")} vectorEffect="non-scaling-stroke" />
+        </svg>
+      </div>
+      <span className="home-presence-map-label">Pernambuco</span>
+    </div>
+  );
+}
+
 /** Decorative relationships, never geographic coordinates. */
 export function PresenceBackground() {
   const ref = useRef<HTMLCanvasElement>(null);
@@ -51,8 +64,11 @@ export function PresenceBackground() {
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
+    const section = canvas.closest<HTMLElement>(".home-region--network");
+    const mapArea = section?.querySelector<HTMLElement>("[data-presence-map]");
+    if (!section || !mapArea || typeof IntersectionObserver === "undefined" || typeof ResizeObserver === "undefined") return;
     const motion = matchMedia("(prefers-reduced-motion: no-preference)");
-    const compact = matchMedia("(max-width: 900px), (pointer: coarse)");
+    const compact = matchMedia("(max-width: 900px)");
     let visible = false;
     let frame = 0;
     let last = 0;
@@ -60,22 +76,10 @@ export function PresenceBackground() {
     let revealStartedAt = 0;
     let width = 1;
     let height = 1;
+    let mapRect = { x: 0, y: 0, width: 1, height: 1 };
     let terminals: Array<{ x: number; y: number; phase: number }> = [];
 
-    function getMapRect(isCompact: boolean) {
-      const aspect = 3.06;
-      if (isCompact) {
-        const mapWidth = width * 0.92;
-        const mapHeight = mapWidth / aspect;
-        const firstTileY = terminals.length ? Math.min(...terminals.map((point) => point.y)) : height * 0.62;
-        return { x: (width - mapWidth) / 2, y: Math.max(height * 0.38, firstTileY - mapHeight - 34), width: mapWidth, height: mapHeight };
-      }
-      const mapWidth = Math.min(width * 0.87, height * 2.85);
-      const mapHeight = mapWidth / aspect;
-      return { x: width - mapWidth - width * 0.015, y: (height - mapHeight) * 0.45, width: mapWidth, height: mapHeight };
-    }
-
-    function getMapPath(rect: ReturnType<typeof getMapRect>) {
+    function getMapPath(rect: typeof mapRect) {
       const path = new Path2D();
       PERNAMBUCO_OUTLINE.forEach(([x, y], index) => {
         const px = rect.x + x * rect.width;
@@ -91,11 +95,11 @@ export function PresenceBackground() {
       if (!ctx) return;
       ctx.clearRect(0, 0, width, height);
       const isCompact = compact.matches;
-      const reduceMotion = !motion.matches;
+      const reduceMotion = !motion.matches || section?.dataset.presencePaused === "true";
       const reveal = reduceMotion || !revealStartedAt
         ? 1
         : Math.min(1, (now - revealStartedAt) / 850);
-      const rect = getMapRect(isCompact);
+      const rect = mapRect;
       const mapPath = getMapPath(rect);
       const nodeCount = isCompact ? 34 : 52;
       const range = isCompact ? Math.min(88, rect.width * 0.24) : Math.min(178, rect.width * 0.17);
@@ -162,7 +166,7 @@ export function PresenceBackground() {
       }
       ctx.restore();
 
-      // The client tiles are the destinations of the territorial network, not a separate block.
+      // Connect decorative relationships to the photo mosaic.
       terminals.forEach((terminal, index) => {
         let source = points[0];
         let closest = Number.POSITIVE_INFINITY;
@@ -195,7 +199,7 @@ export function PresenceBackground() {
     }
     function tick(now: number) {
       frame = 0;
-      if (!visible || document.hidden || !motion.matches) return;
+      if (!visible || document.hidden || !motion.matches || section?.dataset.presencePaused === "true") return;
       if (now - last >= (compact.matches ? 50 : 33)) {
         elapsed += Math.min((now - last) / 1000, 0.05);
         last = now;
@@ -206,21 +210,28 @@ export function PresenceBackground() {
     function sync() {
       cancelAnimationFrame(frame); frame = 0; last = performance.now();
       if (!motion.matches) { elapsed = 0; draw(); }
-      if (visible && !document.hidden && motion.matches) frame = requestAnimationFrame(tick);
+      if (visible && !document.hidden && motion.matches && section?.dataset.presencePaused !== "true") frame = requestAnimationFrame(tick);
     }
     function resize() {
-      if (!canvas || !ctx) return;
+      if (!canvas || !ctx || !section || !mapArea) return;
       width = canvas.clientWidth; height = canvas.clientHeight;
       const canvasRect = canvas.getBoundingClientRect();
-      terminals = Array.from(document.querySelectorAll<HTMLElement>("[data-partner-tile]")).map((tile, index) => {
-        const tileRect = tile.getBoundingClientRect();
+      const mapBounds = mapArea.getBoundingClientRect();
+      mapRect = { x: mapBounds.left - canvasRect.left, y: mapBounds.top - canvasRect.top, width: mapBounds.width, height: mapBounds.height };
+      const grid = section.querySelector<HTMLElement>(".home-region-partner-grid");
+      const gridBounds = grid?.getBoundingClientRect();
+      terminals = Array.from(section.querySelectorAll<HTMLElement>("[data-partner-tile]")).map((tile, index) => {
+        // Grid offsets stay stable during convergence and gentle card drift.
+        const x = (gridBounds?.left ?? canvasRect.left) - canvasRect.left + tile.offsetLeft;
+        const y = (gridBounds?.top ?? canvasRect.top) - canvasRect.top + tile.offsetTop;
         return compact.matches
-          ? { x: tileRect.left - canvasRect.left + tileRect.width / 2, y: tileRect.top - canvasRect.top + 2, phase: index * 0.17 }
-          : { x: tileRect.left - canvasRect.left + 2, y: tileRect.top - canvasRect.top + tileRect.height / 2, phase: index * 0.17 };
+          ? { x: x + tile.offsetWidth / 2, y: y + 2, phase: index * 0.17 }
+          : { x: x + 2, y: y + tile.offsetHeight / 2, phase: index * 0.17 };
       });
       const dpr = Math.min(devicePixelRatio || 1, 1.5);
       canvas.width = Math.round(width * dpr); canvas.height = Math.round(height * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0); draw();
+      canvas.dataset.ready = "true";
     }
     const observer = new IntersectionObserver(([entry]) => {
       visible = entry.isIntersecting;
@@ -228,15 +239,19 @@ export function PresenceBackground() {
       sync();
     }, { rootMargin: "120px 0px" });
     observer.observe(canvas);
-    const sizeObserver = new ResizeObserver(resize); sizeObserver.observe(canvas);
+    const sizeObserver = new ResizeObserver(resize); sizeObserver.observe(canvas); sizeObserver.observe(mapArea);
+    const updateLayout = () => { resize(); sync(); };
     motion.addEventListener("change", sync);
-    compact.addEventListener("change", sync);
+    compact.addEventListener("change", updateLayout);
+    section.addEventListener("presence-motion-change", sync);
     document.addEventListener("visibilitychange", sync);
     resize();
     return () => {
       cancelAnimationFrame(frame); observer.disconnect(); sizeObserver.disconnect();
       motion.removeEventListener("change", sync); document.removeEventListener("visibilitychange", sync);
-      compact.removeEventListener("change", sync);
+      compact.removeEventListener("change", updateLayout);
+      section.removeEventListener("presence-motion-change", sync);
+      delete canvas.dataset.ready;
     };
   }, []);
   return <canvas ref={ref} className="home-presence-field" aria-hidden="true" />;

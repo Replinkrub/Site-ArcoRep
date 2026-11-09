@@ -1,0 +1,28 @@
+.home-hero-access { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-top: 1rem; }
+.home-hero-access a { display: inline-flex; align-items: center; min-height: 44px; color: #fff; font-size: .9375rem; font-weight: 650; text-decoration: underline; text-underline-offset: 4px; }
+.home-hero-overlay, .home-hero-grid, .home-hero::before { pointer-events: none; }
+.home-about-actions, .home-hero-actions { position: relative; z-index: 5; }
+.global-actions .global-registration { background: #164ee7; color: #fff; border-color: #164ee7; }
+.global-mobile-sheet [data-slot="sheet-footer"] { padding-bottom: max(1rem, env(safe-area-inset-bottom, 0px)); }
+.global-mobile-attendance { display: flex; align-items: center; justify-content: center; min-height: 48px; font-size: .9375rem; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.catalog-registration-link { display: inline-flex; align-items: center; min-height: 44px; font-size: .875rem; font-weight: 650; text-decoration: underline; text-underline-offset: 3px; color: #0454c6; }
+.attendance-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem 1rem; }
+.attendance-field { min-width: 0; display: grid; align-content: start; gap: .5rem; }
+.attendance-field--full { grid-column: 1 / -1; }
+.attendance-field label { font-size: .9375rem; font-weight: 700; color: #061142; }
+.attendance-field input, .attendance-field textarea, .attendance-field select { width: 100%; min-height: 48px; font-size: 1rem; color: #061142; border-color: #bccbdd; border-radius: 6px; background: #fff; }
+.attendance-field textarea { min-height: 120px; line-height: 1.5; }
+.attendance-field [data-slot="native-select-wrapper"] { width: 100%; min-width: 0; }
+.attendance-field-error, .attendance-error-summary { color: #a11e29; font-size: .875rem; line-height: 1.4; }
+.attendance-error-summary { margin-top: 1rem; }
+.attendance-form-note { color: #526178; font-size: .875rem; line-height: 1.55; margin-block: 1.25rem; }
+.attendance-submit, .attendance-reopen { display: flex; width: 100%; height: auto; min-height: 48px; padding: .85rem 1rem; justify-content: center; align-items: center; background: #0454c6; color: #fff; font-size: 1rem; font-weight: 700; border-radius: 6px; white-space: normal; text-align: center; }
+.attendance-submit:hover, .attendance-reopen:hover { background: #061142; color: #fff; }
+.attendance-prepared { padding-top: 1.5rem; margin-top: 1.5rem; border-top: 1px solid #dbe4f0; }
+.attendance-prepared h2 { font-size: 1.25rem; font-weight: 750; }
+.attendance-prepared p { font-size: .9375rem; line-height: 1.5; margin-block: .75rem 1rem; color: #526178; }
+.attendance-prepared details { margin-top: 1rem; }
+.attendance-prepared summary { cursor: pointer; min-height: 44px; font-size: .9375rem; font-weight: 650; }
+.attendance-prepared textarea { font-size: 1rem; margin-bottom: .75rem; }
+.attendance-form input:focus-visible, .attendance-form select:focus-visible, .attendance-form textarea:focus-visible, .attendance-reopen:focus-visible, .home-hero-access a:focus-visible { outline: 2px solid #0878ed; outline-offset: 3px; }
+@media (max-width: 640px) { .home-hero-access { display: grid; gap: .125rem; } .home-hero-access a { font-size: .875rem; } .attendance-fields { grid-template-columns: 1fr; gap: 1rem; } }

@@ -1,3 +1,6 @@
+
+import SiteImage from "@/components/site-image";
+import Link from "@/components/site-link";
 import {
   ArrowRight,
 } from "lucide-react";
@@ -6,19 +9,20 @@ import { BrandLogoRail } from "@/components/catalog/brand-logo-rail";
 import { HomeMotion } from "@/components/home/home-motion";
 import { FieldVideo } from "@/components/home/field-video";
 import { PartnerPhotoGrid } from "@/components/home/partner-photo-grid";
-import { PresenceBackground } from "@/components/home/presence-background";
-import { Button } from "@/components/ui/button";
-import { arcoContact, whatsappUrl } from "@/lib/catalog-data";
+import { PresenceBackground, PresenceMap } from "@/components/home/presence-background";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { arcoContact } from "@/lib/catalog-data";
+import { attendanceUrl } from "@/lib/attendance";
+import { responsiveImage } from "@/lib/responsive-images";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { MarketsSection, WhyArco } from "@/components/brand-discovery";
 
 const stats = [
   { value: "1.000+", label: "clientes na base comercial" },
   { value: "5.000+", label: "itens no portfólio" },
 ];
 
-const industryMessage = "Olá, Antonio. Sou de uma indústria e quero entender como a ARCO pode representar nossa marca no varejo de Pernambuco.";
-const mixMessage = "Olá, Antonio. Quero montar o mix da seção churrasco para minha loja em Pernambuco. Podemos conversar?";
 
 const partners = [
   {
@@ -161,38 +165,47 @@ const process = [
     kicker: "Indústria",
     flowLabel: "Indústria",
     title: "Conhecer o portfólio",
-    description: "Entender as linhas e as condições comerciais de cada marca.",
-    image: "/method-origin.webp",
-    imageAlt: "Mix de produtos para churrasco organizado em uma exposição real de varejo.",
+    description: "Conhecer os produtos, os pedidos mínimos e as condições de cada marca.",
+    image: "/catalog/covers/orved-brock.webp",
+    imageAlt: "Embaladora a vácuo Orved Brock na operação de preparo de alimentos.",
+    imagePosition: "18% center",
   },
   {
     number: "02",
     kicker: "ARCO",
     flowLabel: "ARCO",
     title: "Escolher o mix",
-    description: "Considerar o perfil da loja, o espaço e o público.",
-    image: "/method-execution.webp",
-    imageAlt: "Execução comercial em uma loja, com exposição de produtos para churrasco.",
+    description: "Selecionar produtos conforme o público, o espaço e o que a loja já vende.",
+    image: "/catalog/covers/monte-novo.webp",
+    imageAlt: "Tábua Monte Novo em uma composição de serviço de churrasco.",
+    imagePosition: "38% center",
   },
   {
     number: "03",
     kicker: "Ponto de venda",
     flowLabel: "Ponto de venda",
-    title: "Acompanhar a execução",
-    description: "Orientar a exposição e acompanhar a presença dos produtos.",
+    title: "Cuidar da exposição",
+    description: "Orientar a exposição dos produtos na loja.",
     image: "/method-pdv.webp",
     imageAlt: "Exposição organizada de temperos e produtos para churrasco no ponto de venda.",
+    imagePosition: "center",
   },
   {
     number: "04",
     kicker: "Recompra",
     flowLabel: "Recompra",
     title: "Planejar a reposição",
-    description: "Ajustar o mix e a reposição conforme a necessidade da loja.",
+    description: "Acompanhar o histórico de pedidos para orientar a reposição.",
     image: "/method-result.webp",
     imageAlt: "Exposição completa de acessórios para churrasco em loja parceira.",
+    imagePosition: "48% center",
   },
 ];
+
+// Cover crops need enough pixels for their height as well as the visible width.
+// Keep wide photos generous; only the portrait cards shrink on a phone.
+const methodWideSizes = "700px";
+const methodPortraitSizes = "(max-width: 760px) 200px, (max-width: 959px) 50vw, 600px";
 
 export default function Home() {
   return (
@@ -202,7 +215,7 @@ export default function Home() {
 
       <section className="home-hero" aria-labelledby="home-hero-title" data-scroll-scene="hero">
         <div className="home-header-clearance" aria-hidden="true" />
-        <img
+        <SiteImage
           src="/category-execution.webp"
           srcSet="/category-execution-768.webp 768w, /category-execution-1024.webp 1024w, /category-execution.webp 1600w"
           sizes="(max-width: 640px) 1200px, 100vw"
@@ -221,23 +234,22 @@ export default function Home() {
             O mix certo para a seção churrasco da sua loja.
           </h1>
           <p>
-            Alimentos, acessórios e equipamentos de marcas representadas pela ARCO, com orientação comercial para o varejo de Pernambuco.
+            Alimentos, acessórios e equipamentos para supermercados, açougues e empórios. A ARCO ajuda a escolher os produtos e acompanha a reposição.
           </p>
           <div className="home-hero-actions">
             <Button asChild className="home-button home-button--primary">
-              <a href={whatsappUrl(mixMessage)} target="_blank" rel="noreferrer">Montar o mix da minha loja <ArrowRight /></a>
+              <Link href="/catalogos">Ver todos os catálogos</Link>
             </Button>
-            <Button asChild variant="outline" className="home-button home-button--ghost">
-              <a href="/catalogos">Ver catálogos</a>
-            </Button>
+            <a href={arcoContact.orderPlatformUrl} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline", className: "home-button home-button--ghost" })}>Já tenho acesso: fazer pedido</a>
           </div>
-          <small className="home-hero-eligibility">Atendimento a empresas com CNPJ.</small>
+          <div className="home-hero-access"><a href={arcoContact.registrationUrl} target="_blank" rel="noopener noreferrer">Solicitar acesso para comprar</a><Link href="/representadas">Conhecer as representadas</Link></div>
+          <small className="home-hero-eligibility">Desde 2018 em Pernambuco · Atendimento a empresas com CNPJ.</small>
         </div>
 
         <div className="home-hero-marker">
           <span>01</span>
           <i />
-          <small>Categoria em movimento</small>
+          <small>Especialistas na seção churrasco</small>
         </div>
       </section>
 
@@ -245,15 +257,18 @@ export default function Home() {
         <div className="page-shell">
           <header className="home-centered-heading">
             <p className="home-kicker"><span /> Representadas <span /></p>
-            <h2>Marcas para completar a seção churrasco.</h2>
-            <p>Conheça as linhas de alimentos, acessórios e equipamentos para sua loja.</p>
+            <h2>Do tempero ao equipamento.</h2>
+            <p>Conheça as linhas de cada representada ou acesse diretamente todos os catálogos.</p>
           </header>
         </div>
         <BrandLogoRail variant="home" />
         <div className="page-shell home-portfolio-link">
-          <a href="/catalogos">Ver catálogos <ArrowRight /></a>
+          <Link prefetch={true} href="/representadas">Conhecer as representadas <ArrowRight aria-hidden="true" /></Link>
+          <Link prefetch={true} href="/catalogos">Ver todos os catálogos <ArrowRight aria-hidden="true" /></Link>
         </div>
       </section>
+
+      <MarketsSection />
 
       <section id="metodo" className="home-process home-section" data-scroll-scene="method" aria-labelledby="home-method-title">
         <div className="page-shell">
@@ -261,7 +276,7 @@ export default function Home() {
           <header className="home-centered-heading">
             <p className="home-kicker"><span /> Nosso método <span /></p>
             <h2 id="home-method-title">O pedido entra. O trabalho continua.</h2>
-            <p>Do portfólio da indústria à reposição na loja, cada etapa tem acompanhamento comercial.</p>
+            <p>Escolha, exposição e reposição: o atendimento acompanha o caminho do produto na sua loja.</p>
           </header>
 
           <div className="home-process-frame">
@@ -271,17 +286,17 @@ export default function Home() {
                   return (
                     <article key={step.number} data-story-panel data-current={String(index === 0)} className="home-process-stage">
                       <figure className="home-process-visual">
-                        <img
+                        <SiteImage
                           src={step.image}
+                          {...responsiveImage(step.image, index % 2 === 0 ? methodWideSizes : methodPortraitSizes)}
                           alt={step.imageAlt}
                           width={1440}
                           height={900}
-                          sizes="(max-width: 640px) 35vw, (max-width: 959px) 50vw, 290px"
                           loading="lazy"
                           decoding="async"
+                          style={{ objectPosition: step.imagePosition }}
                         />
                         <span className="home-process-visual-number" aria-hidden="true">{step.number}</span>
-                        <figcaption>Registro de varejo — {step.kicker}</figcaption>
                       </figure>
 
                       <div className="home-process-copy">
@@ -308,16 +323,16 @@ export default function Home() {
             </figure>
             <div className="home-about-evidence-photos">
               <figure className="home-about-evidence-photo">
-                <img src="/field/estoque-cantagallo.jpg" alt="Estoque de produtos Cantagallo nas prateleiras de um cliente" width={1536} height={2048} loading="lazy" decoding="async" />
+                <SiteImage src="/field/estoque-cantagallo.webp" {...responsiveImage("/field/estoque-cantagallo.webp", "(max-width: 760px) 42vw, (max-width: 900px) 260px, 280px")} alt="Estoque de produtos Cantagallo nas prateleiras de um cliente" width={1536} height={2048} loading="lazy" decoding="async" />
                 <figcaption>Estoque no cliente</figcaption>
               </figure>
               <figure className="home-about-evidence-photo home-about-evidence-photo--action">
-                <img src="/field/ativacao-original.jpeg" alt="Ação Cantagallo com apresentação de produtos em uma loja" width={1200} height={1600} loading="lazy" decoding="async" />
+                <SiteImage src="/field/ativacao-original.webp" {...responsiveImage("/field/ativacao-original.webp", "(max-width: 760px) 50vw, (max-width: 900px) 310px, 340px")} alt="Ação Cantagallo com apresentação de produtos em uma loja" width={1200} height={1600} loading="lazy" decoding="async" />
                 <figcaption>Ativação em loja</figcaption>
               </figure>
               <figure className="home-about-evidence-photo home-about-evidence-photo--display">
                 <span className="home-about-evidence-photo-window">
-                  <img src="/field/exposicao-original.png" alt="Produtos para churrasco organizados na seção de supermercado" width={455} height={568} loading="lazy" decoding="async" />
+                  <SiteImage src="/field/exposicao-original.webp" {...responsiveImage("/field/exposicao-original.webp", "(max-width: 760px) 63vw, (max-width: 900px) 390px, 420px")} alt="Produtos para churrasco organizados na seção de supermercado" width={455} height={568} loading="lazy" decoding="async" />
                 </span>
                 <figcaption>Exposição no PDV</figcaption>
               </figure>
@@ -325,22 +340,21 @@ export default function Home() {
           </div>
 
           <div className="home-about-copy">
-            <p className="home-kicker">Sobre a ARCO <span /></p>
-            <h2>Representação comercial construída no varejo.</h2>
+            <p className="home-kicker">Por que escolher a ARCO <span /></p>
+            <h2>Desde 2018, no dia a dia do varejo.</h2>
             <p>
-              Desde 2018, conectamos indústrias ao varejo alimentar de Pernambuco. Nossa atuação combina orientação de mix, acompanhamento comercial e presença no ponto de venda.
+              Nossa experiência vem de acompanhar o que a loja compra, como expõe e quando precisa repor. É essa leitura que orienta o atendimento da ARCO em Pernambuco.
             </p>
+            <WhyArco compact />
             <div className="home-about-stats" aria-label="Números da ARCO">
               {stats.map((stat) => <div key={stat.label}><strong>{stat.value}</strong><span>{stat.label}</span></div>)}
             </div>
             <div className="home-about-actions">
-              <Button asChild className="home-button home-button--primary home-button--darktext">
-                <a href="/quem-somos">Conheça a ARCO <ArrowRight /></a>
-              </Button>
-              <a className="home-industry-link" href={whatsappUrl(industryMessage)} target="_blank" rel="noreferrer">
+              <Link prefetch={true} href="/quem-somos" className={buttonVariants({ className: "home-button home-button--primary home-button--darktext" })}>Conheça nossa atuação</Link>
+              <Link prefetch={true} className="home-industry-link" href={attendanceUrl("industria")}>
                 <span>Para indústrias</span>
-                Quer levar sua marca ao varejo de Pernambuco? Converse com a ARCO. <ArrowRight aria-hidden="true" />
-              </a>
+                Vamos avaliar a representação da sua marca em Pernambuco.
+              </Link>
             </div>
           </div>
         </div>
@@ -351,9 +365,10 @@ export default function Home() {
         <div className="page-shell home-region-layout">
         <aside className="home-region-partner-network" data-partner-network aria-labelledby="home-partner-network-title">
           <header className="home-region-partner-heading">
-            <p className="home-kicker home-kicker--light">Clientes</p>
-            <h2 id="home-partner-network-title">Presença no varejo de Pernambuco.</h2>
-            <span>Conheça algumas das lojas que fazem parte da nossa atuação comercial.</span>
+            <p className="home-kicker home-kicker--light">Lojas na nossa trajetória</p>
+            <h2 id="home-partner-network-title">Nosso trabalho tem endereço.</h2>
+            <span>Supermercados, açougues e empórios que fazem parte da trajetória comercial da ARCO em Pernambuco.</span>
+            <PresenceMap />
           </header>
           <PartnerPhotoGrid partners={partners} morePartners={morePartners} additionalPartners={additionalPartners} />
         </aside>
@@ -363,16 +378,17 @@ export default function Home() {
       <section className="home-closing">
         <div className="page-shell home-closing-grid">
           <div>
-            <h2>Vamos montar o mix da sua loja?</h2>
-            <p className="home-closing-description">Conte para a ARCO o que você já trabalha e o que pretende ampliar.</p>
+            <h2>Encontre o mix para sua loja.</h2>
+            <p className="home-closing-description">Conheça as marcas para o primeiro pedido, novas linhas ou reposição. Já tem acesso liberado? Consulte preços e faça pedidos no Mercos.</p>
           </div>
           <div className="home-closing-actions">
             <Button asChild className="home-button home-button--primary">
-              <a href={whatsappUrl(mixMessage)} target="_blank" rel="noreferrer">Montar o mix da minha loja <ArrowRight /></a>
+              <Link href="/catalogos">Conhecer produtos e marcas</Link>
             </Button>
-            <a className="home-closing-registration" href={arcoContact.orderPlatformUrl} target="_blank" rel="noreferrer">Já é cliente? Comprar para sua loja <ArrowRight /></a>
+            <a className="home-closing-registration" href={arcoContact.orderPlatformUrl} target="_blank" rel="noopener noreferrer">Já tenho acesso: fazer pedido</a>
+            <Link prefetch={true} className="home-closing-registration" href={attendanceUrl("reposicao")}>Orientação para reposição ou novas linhas</Link>
             <a className="home-closing-registration" href={arcoContact.registrationUrl} target="_blank" rel="noreferrer">
-              Precisa de acesso? Solicitar cadastro <ArrowRight />
+              Solicitar acesso para comprar
             </a>
           </div>
         </div>

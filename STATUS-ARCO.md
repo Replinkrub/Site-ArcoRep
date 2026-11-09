@@ -1,20 +1,24 @@
-# ARCO — etapa anterior à publicação
+# ARCO — jornada comercial
 
-Atualizado em 23/09/2026. Implementação concluída para avaliação em tela na publicação privada atual da ARCO. O domínio definitivo e a publicação no GitHub ficam para uma etapa posterior.
+Atualizado em 09/10/2026. Base da atualização: versão publicada 59, commit `da8aa69b226c2c65f88d84a363017a5596f470ae`. Endereço: https://arco-representacoes.antonioaquino.chatgpt.site.
 
-## Feito
+## Funcionalidades
 
-- Um catálogo principal por representada; link direto quando houver arquivo, solicitação pelo WhatsApp enquanto não houver.
-- Grade dos sete cartões em 4 + 3 centralizados no desktop, duas colunas no tablet e uma no mobile.
-- Marca ARCO branca e transparente nos cabeçalhos e rodapés escuros; cabeçalho compacto da home em azul-marinho.
-- Mensagem geográfica centrada em Pernambuco, com números atualizados: desde 2018, mais de 1.000 clientes na base comercial e mais de 5.000 itens no portfólio.
-- Página `/perguntas-frequentes` com acesso pelo cabeçalho, rodapé e seção compacta dos catálogos.
-- CTA final da home abre o WhatsApp com mensagem específica sobre o mix da loja; cadastro permanece secundário.
-- Trilho de marcas usa rolagem manual com encaixe no mobile; a rotação automática permanece no desktop.
+- Home, identidade visual, método, presença comercial e marcas preservados.
+- Chamada principal para conhecer produtos e marcas, com caminho separado de pedido para clientes atuais no Mercos.
+- Vitrine com seis marcas, sete PDFs próprios, busca e filtros.
+- A pergunta “Sua empresa já compra com a ARCO?” continua no acesso ao catálogo. A resposta de cliente é uma autodeclaração.
+- Formulário curto sem CNPJ para conhecer os catálogos; gravação antes da liberação, confirmação e conversa contextual no WhatsApp sem repetir o formulário.
+- Formulário geral de atendimento preservado, com gravação da demanda antes de abrir o WhatsApp.
+- Painel e CSV restritos à conta autorizada da ARCO. Origem de entrada e campanha adicionadas aos contatos futuros; registros antigos preservados.
+- Navegação por documento mantida como alternativa estável à transição que apresentava travamentos.
+- Calculadora pública em `/calculadora`: custos por unidade, frete em reais ou percentual sobre aquisição, taxas sobre a venda, margem de contribuição e composição do preço. Sem cadastro ou API de IA. Regras e verificação em `docs/pricing-calculator.md`.
 
-## Para a próxima etapa
+## Validação e próximos passos
 
-- Anexar e validar os arquivos reais dos catálogos quando estiverem disponíveis. Hoje, os sete botões oferecem solicitação pelo WhatsApp; nenhum PDF fictício foi vinculado.
-- Substituir imagens das marcas em edição, mantendo as imagens ilustrativas atuais enquanto isso.
-- Fazer a revisão visual em dispositivo móvel real antes de publicar. O build e a conferência visual no desktop passaram; a busca e o filtro de catálogos responderam corretamente.
-- Configurar o domínio escolhido e enviar ao GitHub apenas quando autorizado.
+- Testar a aquisição com 5–8 lojistas novos e um cliente atual, incluindo uso real em celular e navegador interno do Instagram/WhatsApp.
+- Organizar responsável e andamento dos contatos na rotina comercial. Contatos recebidos não equivalem a oportunidades qualificadas ou pedidos.
+- Medir dificuldades observadas antes de ampliar funcionalidades ou substituir navegação e infraestrutura.
+- Kepler continua sendo uma etapa posterior; não faz parte desta entrega.
+- Não há dados reais de uso do produto ou resultados de conversão validados.
+- A sincronização com o repositório externo do GitHub continua sendo uma frente separada; não deve ser presumida a partir da publicação do site.

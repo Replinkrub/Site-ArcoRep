@@ -1,11 +1,15 @@
 "use client";
 
+import SiteImage from "@/components/site-image";
+
+import Link from "@/components/site-link";
 import { useRef, useState } from "react";
 import { Pause, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLogoScroll } from "./use-logo-scroll";
 
 import { catalogBrands } from "@/lib/catalog-data";
+import { brandPath } from "@/lib/brand-pages";
 
 type BrandLogoRailProps = {
   variant?: "catalog" | "home";
@@ -37,7 +41,7 @@ export function BrandLogoRail({ variant = "catalog", onBrandSelect }: BrandLogoR
                 const content = (
                   <>
                     <span className="catalog-logo-art">
-                      {brand.logo && <img src={brand.railLogo ?? brand.logo} alt="" loading={copy === 0 ? "eager" : "lazy"} decoding="async" />}
+                      {brand.logo && <SiteImage src={brand.railLogo ?? brand.logo} alt="" loading={copy === 0 ? "eager" : "lazy"} decoding="async" />}
                     </span>
                     <span className="catalog-logo-name">{brand.name}</span>
                   </>
@@ -59,15 +63,16 @@ export function BrandLogoRail({ variant = "catalog", onBrandSelect }: BrandLogoR
                 }
 
                 return (
-                  <a
+                  <Link
+                    prefetch={true}
                     key={brand.slug}
                     className={`catalog-logo-item catalog-logo-item--${brand.slug}`}
-                    href={`/catalogos#brand-${brand.slug}`}
-                    aria-label={copy === 1 ? undefined : `Ver catálogos de ${brand.name}`}
+                    href={variant === "home" ? brandPath(brand) : `/catalogos#brand-${brand.slug}`}
+                    aria-label={copy === 1 ? undefined : variant === "home" ? `Conhecer ${brand.name}` : `Ver catálogos de ${brand.name}`}
                     tabIndex={copy === 1 ? -1 : undefined}
                   >
                     {content}
-                  </a>
+                  </Link>
                 );
               })}
             </div>

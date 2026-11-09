@@ -10,10 +10,11 @@ export function FieldVideo() {
     if (!video) return;
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const autoplay = window.matchMedia("(min-width: 761px) and (pointer: fine)");
     let visible = false;
     const sync = () => {
-      if (reducedMotion.matches || !visible || document.hidden) video.pause();
-      else void video.play().catch(() => {});
+      if (!visible || document.hidden) video.pause();
+      else if (autoplay.matches && !reducedMotion.matches) void video.play().catch(() => {});
     };
     const observer = new IntersectionObserver(([entry]) => {
       visible = entry.isIntersecting;
@@ -21,10 +22,12 @@ export function FieldVideo() {
     }, { threshold: 0.25 });
     observer.observe(video);
     reducedMotion.addEventListener("change", sync);
+    autoplay.addEventListener("change", sync);
     document.addEventListener("visibilitychange", sync);
     return () => {
       observer.disconnect();
       reducedMotion.removeEventListener("change", sync);
+      autoplay.removeEventListener("change", sync);
       document.removeEventListener("visibilitychange", sync);
     };
   }, []);
@@ -42,7 +45,7 @@ export function FieldVideo() {
       loop
       playsInline
       controls
-      preload="metadata"
+      preload="none"
     />
   );
 }

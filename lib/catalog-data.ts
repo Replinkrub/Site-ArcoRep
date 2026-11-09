@@ -3,6 +3,7 @@ export type CatalogItem = {
   description: string;
   type: "PDF" | "Drive" | "Link";
   href?: string;
+  fileSize?: string;
 };
 
 export type CatalogBrand = {
@@ -23,8 +24,8 @@ export type CatalogBrand = {
 export const catalogCategories = [
   { value: "all", label: "Todas" },
   { value: "acessorios", label: "Acessórios" },
-  { value: "sais-e-temperos", label: "Sais e temperos" },
-  { value: "tabuas-de-madeira", label: "Tábuas de madeira" },
+  { value: "sais-e-temperos", label: "Alimentos e temperos" },
+  { value: "tabuas-de-madeira", label: "Utensílios de madeira" },
   { value: "equipamentos", label: "Equipamentos" },
 ] as const;
 
@@ -34,9 +35,9 @@ export const catalogBrands: CatalogBrand[] = [
     slug: "emporio-cantagallo",
     categories: ["sais-e-temperos"],
     description:
-      "Sais, temperos, farofas, molhos e complementos para uma seção churrasco com forte apelo de gôndola.",
+      "Sais de parrilla, temperos, farofas, molhos e torresmos para revenda na seção churrasco.",
     logo: "/brands/logos/cantagallo.webp",
-    railLogo: "/brands/logos/cantagallo-dark.png",
+    railLogo: "/brands/logos/cantagallo-dark.webp",
     coverImage: "/catalog/covers/cantagallo.webp",
     coverAlt: "Sal de parrilla Cantagallo em uma churrasqueira acesa",
     featured: true,
@@ -48,7 +49,8 @@ export const catalogBrands: CatalogBrand[] = [
         title: "Catálogo geral Cantagallo",
         description: "Linha completa de produtos para churrasco.",
         type: "PDF",
-        href: "https://drive.google.com/file/d/1lNmGti3PTVF1yGQYjXcY9yWc7f76a2M2/view?usp=drivesdk",
+        href: "/catalog/files/cantagallo-2026.dc469a82ba.pdf",
+        fileSize: "18,2 MB",
       },
     ],
   },
@@ -57,7 +59,7 @@ export const catalogBrands: CatalogBrand[] = [
     slug: "monte-novo",
     categories: ["tabuas-de-madeira"],
     description:
-      "Tábuas, gamelas, petisqueiras e peças em madeira para exposição, presentes e composição de kits.",
+      "Tábuas, gamelas e petisqueiras em madeira para preparo, serviço e composição de kits.",
     logo: "/brands/logos/monte-novo.webp",
     coverImage: "/catalog/covers/monte-novo.webp",
     coverAlt: "Tábua Monte Novo servindo carne preparada para churrasco",
@@ -69,7 +71,8 @@ export const catalogBrands: CatalogBrand[] = [
         title: "Catálogo geral Monte Novo",
         description: "Todas as linhas de peças em madeira.",
         type: "PDF",
-        href: "https://drive.google.com/file/d/1GESIr5XnRGhwXE7fxqj11FigAYM6KGnS/view?usp=drivesdk",
+        href: "/catalog/files/monte-novo-2026.ce6b3c3536.pdf",
+        fileSize: "8,6 MB",
       },
     ],
   },
@@ -78,7 +81,7 @@ export const catalogBrands: CatalogBrand[] = [
     slug: "prime-grill",
     categories: ["acessorios"],
     description:
-      "Acessórios para churrasco, acendimento e limpeza que complementam a venda e aumentam a cesta.",
+      "Limpa grelhas, escovas, acendedores e acessórios para o preparo e a limpeza da churrasqueira.",
     logo: "/brands/logos/prime-grill.webp",
     coverImage: "/catalog/covers/prime-grill.webp",
     coverAlt: "Limpa grelhas Prime Grill em uso junto à churrasqueira",
@@ -91,7 +94,8 @@ export const catalogBrands: CatalogBrand[] = [
         title: "Catálogo geral Prime Grill",
         description: "Linha completa de acessórios para churrasco.",
         type: "PDF",
-        href: "https://drive.google.com/file/d/1UD11QbdrDLt7obqdlMYQg1cgMeTCzZRD/view?usp=drivesdk",
+        href: "/catalog/files/prime-grill.7fc4d1d127.pdf",
+        fileSize: "2,8 MB",
       },
     ],
   },
@@ -100,7 +104,7 @@ export const catalogBrands: CatalogBrand[] = [
     slug: "artmill",
     categories: ["acessorios", "equipamentos"],
     description:
-      "Grelhas, espetos, parrillas, pits e acessórios robustos para churrasco e preparo profissional.",
+      "Grelhas, espetos, parrillas e pit smokers para churrasco e defumação.",
     logo: "/brands/logos/artmill.webp",
     searchTerms: ["pit smoker", "fogo de chão", "parrilla"],
     whatsappMessage:
@@ -110,13 +114,15 @@ export const catalogBrands: CatalogBrand[] = [
         title: "Acessórios ArtMill (2025)",
         description: "Catálogo de acessórios para churrasco.",
         type: "PDF",
-        href: "https://drive.google.com/file/d/1G3v06Txecw7Ue-wTgYD8RuMMky7ut2p3/view?usp=drivesdk",
+        href: "/catalog/files/artmill-acessorios-2025.bd1750451f.pdf",
+        fileSize: "9,7 MB",
       },
       {
         title: "Pits e fogo de chão ArtMill (2024)",
         description: "Pits, fogo de chão e parrillas.",
         type: "PDF",
-        href: "https://drive.google.com/file/d/1fiskcK3P3ys8az_S-64MJB6fXwvw9E_r/view?usp=drivesdk",
+        href: "/catalog/files/artmill-pits-2024.5cba4dd29a.pdf",
+        fileSize: "14,4 MB",
       },
     ],
   },
@@ -125,7 +131,7 @@ export const catalogBrands: CatalogBrand[] = [
     slug: "adm-metais",
     categories: ["acessorios"],
     description:
-      "Grelhas, espetos, discos e acessórios metálicos com foco em durabilidade, variedade e exposição.",
+      "Grelhas, espetos, discos e acessórios metálicos para ampliar a linha de utensílios de churrasco.",
     logo: "/brands/logos/adm-metais.webp",
     whatsappMessage:
       "Olá, Antonio. Vi a ADM Metais no site da ARCO e quero orientação para comprar produtos da marca para minha loja.",
@@ -134,7 +140,8 @@ export const catalogBrands: CatalogBrand[] = [
         title: "Catálogo geral ADM Metais",
         description: "Linha de grelhas, espetos, discos e acessórios.",
         type: "PDF",
-        href: "https://drive.google.com/file/d/1d5B_ip_ohNZVRA5Ety3Sl2lKC_p4jgcf/view?usp=drivesdk",
+        href: "/catalog/files/adm-metais.e7b386c5b8.pdf",
+        fileSize: "7,2 MB",
       },
     ],
   },
@@ -143,7 +150,7 @@ export const catalogBrands: CatalogBrand[] = [
     slug: "orved-brock",
     categories: ["equipamentos"],
     description:
-      "Equipamentos para embalar, conservar e agregar valor à operação de açougues, frigoríficos e food service.",
+      "Embaladoras a vácuo e equipamentos para a operação de açougues, frigoríficos e cozinhas profissionais.",
     logo: "/brands/logos/orved-brock.webp",
     coverImage: "/catalog/covers/orved-brock.webp",
     coverAlt: "Seladora a vácuo Orved Brock em operação profissional",
@@ -154,7 +161,8 @@ export const catalogBrands: CatalogBrand[] = [
         title: "Catálogo geral Orved Brock",
         description: "Soluções de vácuo, conservação e processamento.",
         type: "PDF",
-        href: "https://drive.google.com/file/d/1RonIL6y3UvUMzZV_TXuds0tjG42k6dH8/view?usp=drivesdk",
+        href: "/catalog/files/orved-brock-2025.d861adeb50.pdf",
+        fileSize: "6,6 MB",
       },
     ],
   },
@@ -164,27 +172,27 @@ export const catalogFaq = [
   {
     question: "Os catálogos têm preço?",
     answer:
-      "Alguns materiais podem trazer valores de referência. Confirme preços, condições, frete e prazo atuais na plataforma de pedidos ou com a equipe comercial.",
+      "Alguns catálogos trazem valores de referência ou são de edições anteriores. Antes de fechar a compra, confirme preços, disponibilidade, pagamento, frete e prazo com a ARCO.",
   },
   {
     question: "Como recebo o catálogo de uma marca?",
     answer:
-      "Escolha a marca e clique em Ver catálogo para abrir o arquivo no Google Drive. A ArtMill tem catálogos separados de acessórios e de pits e fogo de chão.",
+      "Em Catálogos, escolha a marca e toque em Ver catálogo. Se já compra com a ARCO, confirme e acesse. No primeiro contato, informe os dados de contato e da empresa. Depois, visualize ou baixe o PDF no site.",
   },
   {
     question: "A ARCO vende para pessoa física?",
     answer:
-      "O atendimento comercial é voltado a empresas com CNPJ, como supermercados, açougues, empórios e lojas especializadas.",
+      "Nosso atendimento é voltado a empresas com CNPJ, para revenda ou uso na operação. Entre os clientes estão supermercados, açougues, empórios e lojas especializadas.",
   },
   {
     question: "A ARCO ajuda a escolher o mix?",
     answer:
-      "Sim. A recomendação considera perfil da loja, espaço, público, categoria trabalhada e potencial de giro.",
+      "Sim. Conte o tipo de loja, o público, o espaço disponível e as linhas que já trabalha. Essas informações ajudam a indicar produtos para o primeiro pedido, a reposição ou a ampliação do mix.",
   },
   {
     question: "Como faço para comprar?",
     answer:
-      "Clientes cadastrados podem acessar a plataforma de pedidos. Se ainda não é cliente, solicite seu cadastro com CNPJ e e-mail.",
+      "Conheça as linhas nos catálogos ou fale com a ARCO para escolher os produtos e conferir condições. Para comprar no Mercos, solicite o acesso da empresa. Após a liberação, consulte preços e envie o pedido.",
   },
 ];
 

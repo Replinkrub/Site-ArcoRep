@@ -31,6 +31,11 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# Windows Zone.Identifier alternate data streams — never commit
+*Zone.Identifier
+Zone.Identifier
+*.Zone.Identifier
+
 # vercel
 .vercel
 
