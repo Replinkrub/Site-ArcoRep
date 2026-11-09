@@ -22,7 +22,7 @@ const hooks = {
 };
 const mocks = {
   react: hooks, "react/jsx-runtime": { jsx, jsxs: jsx, Fragment: "fragment" },
-  "next/navigation": { notFound: () => { throw new Error("not-found"); } },
+  "next/navigation": { notFound: () => { throw new Error("not-found"); }, redirect: destination => { throw new Error(`redirect:${destination}`); } },
   "lucide-react": new Proxy({}, { get: (_, name) => String(name) }),
   "@/components/site-image": { default: "img" }, "@/components/site-link": { default: "a" },
   "@/components/site-header": { SiteHeader: "header" }, "@/components/site-footer": { SiteFooter: "footer" },
@@ -96,11 +96,35 @@ for (const brand of catalogBrands) {
   assert.equal(query.get("segmento"), market.segment);
 }
 await assert.rejects(() => brandPage.default({ params: Promise.resolve({ slug: "missing" }), searchParams: Promise.resolve({}) }), /not-found/);
+assert.ok(!catalogBrands.some(brand => brand.slug === "prime-grill"), "Retired brand is absent from the shared active portfolio");
+await assert.rejects(() => brandPage.default({ params: Promise.resolve({ slug: "prime-grill" }), searchParams: Promise.resolve({}) }), /redirect:\/representadas/);
 for (const market of markets) {
   assert.ok(brandsForMarket(market.slug).length > 0);
   assert.ok(existsSync(path.join(root, "public", market.image)));
   assert.equal(new URL(attendanceUrl("mix", undefined, market.segment), "https://example.test").searchParams.get("segmento"), market.segment);
 }
+
+// The pilot keeps brand and market context through both catalog and contact links.
+const { CantagalloShowcase } = load("components/cantagallo-showcase.tsx");
+const { cantagalloLines } = load("lib/cantagallo.ts");
+const cantagallo = catalogBrands.find(brand => brand.slug === "emporio-cantagallo");
+const selectedMarket = markets.find(market => market.slug === "acougues");
+const showcase = nodes(CantagalloShowcase({ brand: cantagallo, market: selectedMarket }));
+for (const line of cantagalloLines) assert.ok(existsSync(path.join(root, "public", line.image)), `Missing original product image ${line.image}`);
+const marketLinks = showcase.filter(node => node.type === "a" && node.props.href?.startsWith("/catalogos?"));
+assert.equal(marketLinks.length, 3);
+for (const link of marketLinks) {
+  const selection = new URL(link.props.href, "https://example.test").searchParams;
+  assert.equal(selection.get("marca"), cantagallo.slug);
+  assert.ok(brandPages[cantagallo.slug].markets.includes(selection.get("mercado")));
+}
+for (const link of showcase.filter(node => node.type === "a" && node.props.href?.startsWith("/atendimento?"))) {
+  const query = new URL(link.props.href, "https://example.test").searchParams;
+  assert.equal(query.get("marca"), cantagallo.slug);
+  assert.equal(query.get("segmento"), selectedMarket.segment);
+}
+assert.ok(showcase.some(node => node.type === "a" && node.props.href === "https://arcorep.meuspedidos.com.br/solicitar-acesso"), "New buyers can request Mercos access");
+assert.equal(showcase.filter(node => node.type === "details").length, 3, "Purchase questions work without client JavaScript");
 
 const { CatalogExplorer } = load("components/catalog/catalog-explorer.tsx");
 const cards = tree => nodes(tree).filter(node => node.type?.name === "BrandCard");
@@ -148,4 +172,4 @@ try {
   assert.equal(access.rememberedCatalogAccess(), null);
 } finally { if (originalStorage === undefined) delete globalThis.localStorage; else globalThis.localStorage = originalStorage; }
 
-console.log("Discovery checks passed: six brand pages, market links, assets, direct catalog access, real filters, contextual contact links and shared anonymous access preference.");
+console.log(`Discovery checks passed: ${catalogBrands.length} active brand pages, Cantagallo original assets and purchase paths, retired-brand redirect, market filters, contextual contact links and shared anonymous access preference.`);

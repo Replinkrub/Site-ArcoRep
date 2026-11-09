@@ -10,6 +10,7 @@ import "./commerce.css";
 import "./presence.css";
 import "./catalogos/catalog.css";
 import "./discovery.css";
+import "./cantagallo.css";
 
 export const metadata: Metadata = {
   title: "ARCO Representações | Especialistas na seção churrasco",

@@ -1,0 +1,98 @@
+.brand-landing--cantagallo .brand-hero-grid { gap: clamp(2rem, 4vw, 4rem); }
+.brand-landing--cantagallo .brand-hero-copy h1 { font-size: clamp(2.4rem, 4.3vw, 4rem); max-width: 15ch; }
+.cantagallo-hero-products { display: flex; flex-direction: column; align-items: center; position: relative; margin: 0; padding: 1.75rem 1.5rem 1.5rem; border-radius: 4rem .5rem .5rem .5rem; color: #061142; background: radial-gradient(ellipse at 50% 60%, #fff 10%, #e2edf8 100%); overflow: hidden; }
+.cantagallo-stage-logo { width: 150px; height: 55px; object-fit: contain; }
+.cantagallo-product-stage { display: grid; grid-template-columns: 1fr 1.2fr .75fr; grid-template-rows: minmax(0, 1fr); gap: .75rem; align-items: end; width: 100%; height: 290px; padding: 1rem .5rem 0; }
+.cantagallo-product-stage > div { min-width: 0; min-height: 0; height: 85%; display: flex; align-items: end; justify-content: center; }
+.cantagallo-product-stage > div:nth-child(2) { height: 100%; }
+.cantagallo-product-stage > div:last-child { height: 95%; }
+.cantagallo-product-stage img { width: 100%; height: 100%; object-fit: contain; object-position: bottom; filter: drop-shadow(0 12px 9px #06114224); }
+.cantagallo-hero-products figcaption { margin-top: 1.5rem; text-align: center; font-size: 1.05rem; font-weight: 650; }
+.cantagallo-hero-products figcaption span { display: block; color: #526178; font-size: .75rem; font-weight: 400; margin-top: .35rem; }
+.cantagallo-lines, .cantagallo-retail, .cantagallo-buying, .cantagallo-order { padding-block: clamp(2.5rem, 5vw, 4.5rem); }
+.cantagallo-lines { background: #fff; }
+.cantagallo-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 2rem; }
+.cantagallo-section-heading > p { max-width: 40ch; font-size: .9375rem; line-height: 1.65; color: #526178; }
+:is(.cantagallo-section-heading, .cantagallo-retail-copy, .cantagallo-buying, .cantagallo-order) h2 { color: #061142; font-size: clamp(1.9rem, 3vw, 2.75rem); line-height: 1.1; letter-spacing: -.04em; font-weight: 600; margin-top: .75rem; text-wrap: balance; }
+.cantagallo-lines-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.cantagallo-lines-grid article { min-width: 0; border: 1px solid #dce5f0; border-radius: 8px; overflow: hidden; }
+.cantagallo-line-image { height: 225px; background: #f2f6fa; display: flex; align-items: center; justify-content: center; padding: 1.5rem; }
+.cantagallo-line-image img { width: auto; height: auto; max-width: 90%; max-height: 100%; object-fit: contain; }
+.cantagallo-line-copy { padding: 1.25rem; }
+.cantagallo-line-copy h3 { color: #061142; font-weight: 650; font-size: 1.125rem; line-height: 1.3; }
+.cantagallo-line-copy p { color: #526178; font-size: .875rem; line-height: 1.6; margin-top: .5rem; }
+.cantagallo-catalog-action { display: flex; align-items: center; gap: 1rem 1.5rem; margin-top: 1.75rem; flex-wrap: wrap; }
+.cantagallo-catalog-action p { color: #526178; font-size: .8125rem; }
+.cantagallo-retail { background: #f2f6fa; }
+.cantagallo-retail-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.cantagallo-retail figure { margin: 0; overflow: hidden; background: #061142; border-radius: .5rem .5rem 4rem .5rem; }
+.cantagallo-retail figure > img { width: 100%; height: 440px; object-fit: cover; }
+.cantagallo-retail figcaption { color: white; padding: 1.25rem 1.5rem; font-weight: 600; font-size: 1rem; }
+.cantagallo-retail figcaption span { display: block; color: #c5d8ee; font-size: .75rem; font-weight: 400; margin-top: .35rem; }
+.cantagallo-retail-copy > p:not(.section-eyebrow) { margin-block: 1rem .5rem; color: #526178; font-size: .9375rem; line-height: 1.7; }
+.cantagallo-applications > a { display: flex; align-items: center; gap: 1.25rem; padding-block: 1.1rem; border-bottom: 1px solid #cdd9e7; }
+.cantagallo-applications h3 { color: #061142; font-size: .9375rem; line-height: 1.4; font-weight: 650; }
+.cantagallo-applications p { margin-top: .35rem; color: #526178; font-size: .8125rem; line-height: 1.55; }
+.cantagallo-applications span { display: inline-block; color: #0454c6; font-weight: 600; font-size: .75rem; margin-top: .5rem; }
+.cantagallo-applications svg { width: 18px; height: 18px; flex: none; color: #0454c6; margin-left: auto; }
+.cantagallo-retail-copy > .brand-learn-link { margin-top: .75rem; }
+.cantagallo-buying { background: #fff; }
+.cantagallo-buying-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 3rem; }
+.cantagallo-buying-grid > div > .brand-learn-link { margin-top: 1.25rem; }
+.cantagallo-questions details { border-bottom: 1px solid #dce5f0; }
+.cantagallo-questions summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; cursor: pointer; min-height: 68px; padding-block: 1rem; font-size: .9375rem; line-height: 1.5; color: #061142; font-weight: 600; list-style: none; }
+.cantagallo-questions summary::-webkit-details-marker { display: none; }
+.cantagallo-questions summary svg { width: 19px; height: 19px; color: #0454c6; flex: none; }
+.cantagallo-questions details[open] summary svg { transform: rotate(180deg); }
+.cantagallo-questions details > p { padding-bottom: 1.25rem; color: #526178; font-size: .875rem; line-height: 1.7; }
+.cantagallo-questions summary:focus-visible { outline: 2px solid #0878ed; outline-offset: 3px; }
+.cantagallo-order { color: #fff; background: #061142; }
+.cantagallo-order .section-eyebrow { color: #a5d5ff; }
+.cantagallo-order h2 { color: white; }
+.cantagallo-order-options { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+.cantagallo-order-options > div { border-top: 1px solid #8cb6e366; padding-top: 1.25rem; }
+.cantagallo-order-options h3 { font-size: 1.125rem; font-weight: 600; }
+.cantagallo-order-options p { color: #c8d8eb; font-size: .9375rem; line-height: 1.65; max-width: 46ch; margin-top: .6rem; }
+.cantagallo-order-options a:not(.cantagallo-order-help) { display: inline-flex; align-items: center; justify-content: center; gap: .75rem; min-height: 46px; background: #0454c6; border: 1px solid #71b5ff; border-radius: 5px; padding: .75rem 1rem; margin-top: 1.25rem; color: white; font-size: .875rem; font-weight: 600; line-height: 1.5; }
+.cantagallo-order-options a:not(.cantagallo-order-help):hover { background: #0878ed; }
+.cantagallo-order-options svg { width: 17px; height: 17px; flex: none; }
+.cantagallo-order-help { display: flex; align-items: center; min-height: 44px; font-size: .8125rem; color: #c6e4ff; text-decoration: underline; text-underline-offset: 4px; margin-top: .35rem; }
+.cantagallo-order > div > .brand-all-catalogs { margin-top: 1.5rem; }
+@media (max-width: 1000px) {
+  .cantagallo-product-stage { height: 240px; gap: .5rem; }
+  .cantagallo-retail-grid { gap: 2rem; }
+  .cantagallo-retail figure > img { height: 400px; }
+}
+@media (max-width: 800px) {
+  .cantagallo-section-heading { align-items: start; flex-direction: column; gap: 1rem; }
+  .cantagallo-section-heading > p { max-width: 55ch; }
+  .cantagallo-lines-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cantagallo-retail-grid, .cantagallo-buying-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+  .cantagallo-retail figure > img { height: 300px; }
+  .cantagallo-buying h2 br { display: none; }
+}
+@media (max-width: 600px) {
+  .brand-landing--cantagallo .brand-hero-grid { gap: 1.5rem; padding-bottom: 2rem; }
+  .brand-landing--cantagallo .brand-hero-copy h1 { font-size: clamp(2.2rem, 9.5vw, 3rem); margin-block: .9rem 1rem; }
+  .cantagallo-hero-products { border-top-left-radius: 3rem; padding: 1.1rem 1rem; }
+  .cantagallo-stage-logo { width: 115px; height: 42px; }
+  .cantagallo-product-stage { height: 175px; padding-top: .6rem; }
+  .cantagallo-hero-products figcaption { margin-top: 1rem; font-size: .875rem; }
+  .cantagallo-hero-products figcaption span { font-size: .6875rem; }
+  .cantagallo-lines-grid { gap: .75rem; }
+  .cantagallo-line-image { height: 155px; padding: 1rem .75rem; }
+  .cantagallo-line-copy { padding: .9rem .75rem; }
+  .cantagallo-line-copy h3 { font-size: 1rem; }
+  .cantagallo-line-copy p { font-size: .8125rem; line-height: 1.55; }
+  .cantagallo-catalog-action { gap: .75rem; margin-top: 1.25rem; }
+  .cantagallo-catalog-action > button { width: 100%; }
+  .cantagallo-retail figure { border-bottom-right-radius: 2.5rem; }
+  .cantagallo-retail figure > img { height: 220px; }
+  .cantagallo-retail figcaption { padding: 1rem 1.25rem; }
+  .cantagallo-order-options { grid-template-columns: 1fr; gap: 1.5rem; }
+  .cantagallo-order-options a:not(.cantagallo-order-help) { width: 100%; }
+}
+@media (max-width: 359px) {
+  .cantagallo-lines-grid { grid-template-columns: 1fr; }
+  .cantagallo-line-image { height: 175px; }
+}

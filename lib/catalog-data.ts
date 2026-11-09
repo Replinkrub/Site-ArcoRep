@@ -77,29 +77,6 @@ export const catalogBrands: CatalogBrand[] = [
     ],
   },
   {
-    name: "Prime Grill",
-    slug: "prime-grill",
-    categories: ["acessorios"],
-    description:
-      "Limpa grelhas, escovas, acendedores e acessórios para o preparo e a limpeza da churrasqueira.",
-    logo: "/brands/logos/prime-grill.webp",
-    coverImage: "/catalog/covers/prime-grill.webp",
-    coverAlt: "Limpa grelhas Prime Grill em uso junto à churrasqueira",
-    featured: true,
-    searchTerms: ["limpa grelhas", "limpa grelha", "escova", "acendedores"],
-    whatsappMessage:
-      "Olá, Antonio. Vi a Prime Grill no site da ARCO e quero orientação para comprar produtos da marca para minha loja.",
-    catalogs: [
-      {
-        title: "Catálogo geral Prime Grill",
-        description: "Linha completa de acessórios para churrasco.",
-        type: "PDF",
-        href: "/catalog/files/prime-grill.7fc4d1d127.pdf",
-        fileSize: "2,8 MB",
-      },
-    ],
-  },
-  {
     name: "ArtMill",
     slug: "artmill",
     categories: ["acessorios", "equipamentos"],
