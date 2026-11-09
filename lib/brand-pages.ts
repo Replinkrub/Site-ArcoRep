@@ -1,5 +1,6 @@
 import { catalogBrands, type CatalogBrand } from "./catalog-data";
 import { segments } from "./form-options";
+import { cantagalloLines } from "./cantagallo";
 
 export const markets = [
   { slug: "supermercados", title: "Supermercados e mercadinhos", shortTitle: "Supermercados", segment: segments[0], image: "/category-execution.webp", alt: "Exposição de produtos para churrasco em supermercado", description: "Alimentos e utensílios para compor a seção churrasco e planejar a reposição." },
@@ -14,14 +15,10 @@ type BrandPage = { headline: string; introduction: string; markets: MarketSlug[]
 
 export const brandPages: Record<string, BrandPage> = {
   "emporio-cantagallo": {
-    headline: "Sabor para completar a seção churrasco.",
-    introduction: "Conheça as linhas do Empório Cantagallo e avalie com a ARCO quais produtos fazem sentido para o público e o espaço da sua loja.",
+    headline: "Cantagallo na seção churrasco da sua loja.",
+    introduction: "Sais de parrilla, farofas, molhos e complementos para revenda. Explore as linhas e monte o pedido com a orientação da ARCO em Pernambuco.",
     markets: ["supermercados", "acougues", "emporios"],
-    lines: [
-      { title: "Sais e temperos", description: "Sais de parrilla, especiarias e dry rubs para diferentes preparos." },
-      { title: "Farofas", description: "Acompanhamentos para trabalhar junto à ocasião churrasco." },
-      { title: "Molhos", description: "Opções para complementar o preparo e o serviço das carnes." },
-    ],
+    lines: cantagalloLines.map(({ title, description }) => ({ title, description })),
     guidance: "Conte quais linhas já vende e como organiza sua seção churrasco. A partir disso, podemos avaliar o primeiro mix, novas opções ou a reposição.",
   },
   "monte-novo": {
@@ -34,17 +31,6 @@ export const brandPages: Record<string, BrandPage> = {
       { title: "Petisqueiras", description: "Peças para compor a mesa e avaliar combinações de presentes e kits." },
     ],
     guidance: "Informe se procura peças para revenda, composição de kits ou uso na operação. A ARCO ajuda a selecionar as linhas e consultar as condições da marca.",
-  },
-  "prime-grill": {
-    headline: "Acessórios para cuidar do churrasco.",
-    introduction: "Conheça a linha Prime Grill de limpeza, acendimento e acessórios. Consulte o catálogo e converse com a ARCO sobre as opções para sua loja.",
-    markets: ["supermercados", "acougues", "emporios"],
-    lines: [
-      { title: "Limpeza", description: "Limpa grelhas e escovas para o cuidado com a churrasqueira." },
-      { title: "Acendimento", description: "Acendedores para complementar a linha de produtos para churrasco." },
-      { title: "Acessórios", description: "Utensílios para avaliar junto ao mix de preparo e manutenção." },
-    ],
-    guidance: "Conte quais acessórios já trabalha e o que deseja complementar. Confirme com a ARCO os produtos disponíveis e as condições antes de montar o pedido.",
   },
   "artmill": {
     headline: "Do espeto ao pit smoker.",
