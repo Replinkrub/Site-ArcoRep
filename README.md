@@ -1,3 +1,66 @@
+# Site ARCO Representações
+
+Site comercial da ARCO para o varejo alimentar de Pernambuco: representadas,
+catálogos, captação de interessados, atendimento, calculadora de preços e área
+restrita para consulta e exportação dos contatos.
+
+- Site publicado: https://arco-representacoes.antonioaquino.chatgpt.site
+- Código-fonte: https://github.com/Replinkrub/Site-ArcoRep
+
+## Desenvolvimento e verificação
+
+Requer Node.js 22.13 ou superior e npm. Em um clone novo:
+
+```sh
+npm ci
+npm run dev
+```
+
+O perfil portátil usa a prévia local informada pelo servidor, normalmente na
+porta 5173. Para verificar uma alteração:
+
+```sh
+node node_modules/typescript/bin/tsc --noEmit --incremental false
+npm run lint
+node scripts/check-contact-flow.mjs
+node scripts/check-discovery.mjs
+node scripts/check-presence.mjs
+node scripts/check-pricing.mjs
+npm run build
+```
+
+Os testes de contatos usam SQLite descartável em memória, sem consultar ou
+alterar registros comerciais da publicação.
+
+## Banco de dados e acesso comercial
+
+Os formulários e a área comercial dependem de Cloudflare D1. O arquivo
+`.openai/hosting.json` precisa declarar `"d1": "DB"`, o mesmo nome consumido
+pelas rotas e pelos helpers de banco. Deixar esse campo como `null` permite
+compilar, mas impede salvar e consultar os contatos em execução.
+
+As migrações estão em `drizzle/`. A publicação pelo fluxo do Sites preserva o
+projeto existente e aplica as migrações pendentes. Os comandos locais descritos
+abaixo usam somente o banco de desenvolvimento.
+
+A variável de execução `ARCO_ADMIN_EMAIL` define a conta autorizada a consultar
+e exportar contatos. Configure-a no ambiente de hospedagem; não publique
+credenciais, tokens nem arquivos `.env` no repositório.
+
+## Organização e publicação
+
+- `app/`: páginas públicas, área comercial e APIs de contatos.
+- `components/`: interface, formulários, calculadora e acesso aos catálogos.
+- `lib/`: dados das marcas, regras comerciais e validações.
+- `public/`: imagens, vídeos e PDFs dos catálogos.
+- `docs/`: fluxos e referências de implementação.
+
+O merge no GitHub atualiza o código-fonte. A publicação continua no Sites e usa
+o projeto já identificado em `.openai/hosting.json`. Preserve sua identidade,
+os vínculos de dados e a configuração de acesso ao publicar.
+
+## Referência técnica do starter
+
 # vinext-starter
 
 A clean full-stack starter running on [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and Drizzle support.

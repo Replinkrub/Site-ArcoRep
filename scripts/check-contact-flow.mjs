@@ -8,6 +8,8 @@ import { DatabaseSync } from "node:sqlite";
 // Run the real validators, SQL helpers and API handlers against disposable
 // SQLite. No production credentials, requests or commercial records are used.
 const root = fileURLToPath(new URL("../", import.meta.url));
+const hosting = JSON.parse(readFileSync(path.join(root, ".openai/hosting.json"), "utf8"));
+assert.equal(hosting.d1, "DB", "The contact API requires the DB binding in the hosting manifest; database mocks alone cannot validate deployment configuration.");
 const requirePackage = createRequire(path.join(root, "package.json"));
 const ts = requirePackage("typescript");
 const sqlite = new DatabaseSync(":memory:");
